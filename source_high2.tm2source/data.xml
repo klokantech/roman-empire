@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Map >
+<Map srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+
+<Parameters>
+  <Parameter name="center">9.0177,49.8299,12</Parameter>
+  <Parameter name="format">pbf</Parameter>
+  <Parameter name="json"><![CDATA[{"vector_layers":[{"id":"places_high","description":"Places high","fields":{"accuracy":"Number","building":"Number","endyear":"String","greek":"String","id":"String","latin":"String","major":"Number","modern":"String","startyear":"String","type":"String"}},{"id":"roads_high","description":"Roads high","fields":{"Name":"String","descriptio":"String"}}]}]]></Parameter>
+  <Parameter name="maxzoom">15</Parameter>
+  <Parameter name="minzoom">11</Parameter>
+</Parameters>
+
+
+<Layer name="places_high" buffer-size="8" srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
+    
+    <Datasource>
+       <Parameter name="file"><![CDATA[places_high.geojson]]></Parameter>
+       <Parameter name="layer"><![CDATA[places_high]]></Parameter>
+       <Parameter name="type"><![CDATA[geojson]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Layer name="roads_high" buffer-size="8" srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
+    
+    <Datasource>
+       <Parameter name="file"><![CDATA[roads_high.geojson]]></Parameter>
+       <Parameter name="layer"><![CDATA[roads_high]]></Parameter>
+       <Parameter name="type"><![CDATA[geojson]]></Parameter>
+    </Datasource>
+  </Layer>
+
+</Map>
