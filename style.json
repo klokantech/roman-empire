@@ -1,0 +1,49 @@
+{
+  "version": 8,
+  "name": "Roman Empire",
+  "metadata": {
+    "mapbox:autocomposite": false,
+    "mapbox:type": "template",
+    "maputnik:renderer": "mbgljs",
+    "openmaptiles:version": "3.x"
+  },
+  "sources": {
+    "color-relief": {
+      "type": "raster",
+      "url": "https://klokantech.github.io/dare-raster-tiles/background.json",
+	  "tileSize": 256
+    },
+    "hillshade": {
+      "type": "raster",
+      "url": "https://wmts.maptiler.com/aHR0https://klokantech.github.io/dare-raster-tiles/hillshade.json",
+	  "tileSize": 256
+    }
+  },
+  "glyphs": "https://fonts.openmaptiles.org/{fontstack}/{range}.pbf",
+  "layers": [
+    {
+      "id": "background",
+      "type": "background",
+      "paint": {
+        "background-color": "rgba(255, 255, 255, 1)"
+      }
+    },
+    {
+      "id": "color-relief",
+      "type": "raster",
+      "source": "color-relief",
+      "maxzoom": 24
+    },
+    {
+      "id": "hillshade",
+      "type": "raster",
+      "source": "hillshade",
+      "maxzoom": 22,
+      "paint": {
+        "raster-opacity": 0.1
+      }
+    }
+  ],
+  "sprites": "https://raw.githubusercontent.com/klokantech/roman-empire-vector-map/gh-pages/sprite",
+  "id": "hgkfuv2f7"
+}
