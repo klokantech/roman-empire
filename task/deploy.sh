@@ -10,6 +10,7 @@ mkdir -p build/icons
 ./node_modules/.bin/spritezero --retina build/icons/sprite@2x icons/
 
 cp style.json build
+cp index.html build
 
 # deploy
 cd build
