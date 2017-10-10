@@ -1,7 +1,13 @@
 #!/usr/bin/env bash
 mkdir -p build
 rm -rf build/*
-docker run -it --rm -v $(pwd)/data:/data -v $(pwd)/build:/build klokantech/tippecanoe tippecanoe -z 7 --output=/build/provinces.mbtiles /data/provinces.geojson
+docker run -it --rm -v $(pwd)/data:/data -v $(pwd)/build:/build \
+    klokantech/tippecanoe tippecanoe \
+    -z 7 \
+    --no-tile-stats \
+    --layer=provinces \
+    --output=/build/provinces.mbtiles \
+    /data/provinces.geojson
 
 cd build
 ./../mbutil/mb-util --image_format=pbf provinces.mbtiles provinces
