@@ -11,12 +11,12 @@
     "color-relief": {
       "type": "raster",
       "url": "https://klokantech.github.io/dare-raster-tiles/background.json",
-	  "tileSize": 256
+      "tileSize": 256
     },
     "hillshade": {
       "type": "raster",
-      "url": "https://wmts.maptiler.com/aHR0https://klokantech.github.io/dare-raster-tiles/hillshade.json",
-	  "tileSize": 256
+      "url": "https://klokantech.github.io/dare-raster-tiles/hillshade.json",
+      "tileSize": 256
     }
   },
   "glyphs": "https://fonts.openmaptiles.org/{fontstack}/{range}.pbf",
