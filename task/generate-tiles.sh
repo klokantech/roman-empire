@@ -77,6 +77,7 @@ docker run -it --rm -v $(pwd)/data:/data -v $(pwd)/build:/build \
     klokantech/tippecanoe tile-join \
     -n "Roman Empire" \
     -f \
+    --no-tile-stats \
     -o /build/roman-empire.mbtiles \
     /build/roads_low.mbtiles \
     /build/roads_high.mbtiles \
@@ -89,7 +90,7 @@ docker run -it --rm -v $(pwd)/data:/data -v $(pwd)/build:/build \
 
 cd build
 find . -name '*.mbtiles' ! -name 'roman-empire.mbtiles' -type f -exec rm -f {} +
-./../mbutil/mb-util --image_format=pbf roman-empire.mbtiles roman-empire
+./../mbutil/mb-util --image_format=pbf --silent roman-empire.mbtiles roman-empire
 cd roman-empire
 gzip -d -r -S .pbf *
 find . -type f ! -name 'metadata.json' -exec mv '{}' '{}'.pbf \;
