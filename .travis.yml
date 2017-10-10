@@ -1,0 +1,18 @@
+sudo: required
+dist: trusty
+language: python
+services:
+- docker
+branches:
+  only:
+  - master
+before_install:
+- sudo apt-get -qq update
+- sudo apt-get install -y gzip
+script:
+- sudo service docker restart
+- git clone https://github.com/mapbox/mbutil.git
+- "./task/generate-tiles.sh"
+- "./task/deploy.sh"
+dd:
+  secure: Hm2b9jQASSV9EaKyAlJSWECKlJ2gZfE0XxsbHIsceS8/y3zWNHeSJQfa7LOq18QvMAq7VaA4EzHRcM3uYEwtEPdbIc55iQxEc6HygyLfpmv7aby/c9ME88fOMASBtqt/tdDorbn044eQAEPpsDdRkt7Io/w/jiYpJ48i4CVnZWNCWTcCwtycZV0WSOzNzjwIty0swOfYc0SQYPfBP6HhrDW10KRHALOmCbmQe+WehqBC4UHGC9F0KZW84JMGmn5FTU2qAzy3riReO3V521YkmxKenlmmgQ4VbJ8rL776yFbFdxj0ZCZp7OTZ/advxeftfn1fvR+ctRUNBzw/YujtAjY+WnDdXo5xWlUadYtv4Ya5/i8nSvb8M85KJ0+ValAdF+FPo5h+xE5WpkL7VeIPtpERaW2NZh5NMYA/0fryvCaCUnOpz61HeAjhOzjoeaFA+o9ks3gd9rPkNSpqq3OfMP5jLFnzHj5M9xgta5vRYL02mslIF1xG3e+eC1WW/U8eM92LuLEhVfSq2vENVFIuyRTn6ebOBHbdWC4sVxU+TqWKiRpkHuC9l1J8js+g1H4wNm/Du721UEBTLoty4rxwK+gd6YS0ewkv5S60wn6Ks9pnfvhaoOyRHV8CEyq/K6pNXiVntUi1ezMTw1RFUUUwo1vW0al0kK6YR3kzu6a2M1E=
