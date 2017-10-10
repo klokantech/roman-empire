@@ -19,5 +19,5 @@ start-tileserver:
 	@echo "* "
 	@echo "***********************************************************"
 	@echo " "
-	docker run -it --rm -v $$(pwd)/build:/data -p 8080:80 klokantech/tileserver-gl
+	docker run -it --rm -v $$(pwd)/build:/data -p 8080:80 klokantech/tileserver-gl roman-empire.mbtiles
 

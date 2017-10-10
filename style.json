@@ -18,7 +18,7 @@
       "url": "https://klokantech.github.io/dare-raster-tiles/hillshade.json",
       "tileSize": 256
     },
-    "provinces": {
+    "roman-empire": {
       "type": "vector",
       "url": "https://gist.githubusercontent.com/jirik/6bc205608e98ed0630f1d7a37aa11ea0/raw/tile.json"
     }
@@ -53,7 +53,7 @@
     {
       "id": "provinces",
       "type": "line",
-      "source": "provinces",
+      "source": "roman-empire",
       "source-layer": "provinces",
       "maxzoom": 7,
       "paint": {
