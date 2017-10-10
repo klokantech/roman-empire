@@ -5,6 +5,10 @@ set -ev
 git config --global user.email "openmaptiles@klokantech.com"
 git config --global user.name "OpenMapTiles Travis"
 
+mkdir -p build/icons
+./node_modules/.bin/spritezero build/icons/sprite icons/
+./node_modules/.bin/spritezero --retina build/icons/sprite@2x icons/
+
 cp style.json build
 
 # deploy

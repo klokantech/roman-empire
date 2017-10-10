@@ -20,6 +20,7 @@
   "homepage": "https://github.com/klokantech/roman-empire-vector-map#readme",
   "dependencies": {
     "fs-extra": "^1.0.0",
-    "mapbox-gl-style-spec": "^8.9.0"
+    "mapbox-gl-style-spec": "^8.9.0",
+    "spritezero-cli": "^1.2.0"
   }
 }
