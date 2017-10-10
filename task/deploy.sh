@@ -5,6 +5,8 @@ set -ev
 git config --global user.email "openmaptiles@klokantech.com"
 git config --global user.name "OpenMapTiles Travis"
 
+cp style.json build
+
 # deploy
 cd build
 git init

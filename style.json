@@ -43,11 +43,11 @@
       "type": "raster",
       "source": "hillshade",
       "maxzoom": 22,
-      "paint": {
-        "raster-opacity": 0.1
-      },
       "layout": {
         "visibility": "visible"
+      },
+      "paint": {
+        "raster-opacity": 0.1
       }
     },
     {
@@ -55,10 +55,10 @@
       "type": "line",
       "source": "provinces",
       "source-layer": "provinces",
+      "maxzoom": 7,
       "paint": {
         "line-color": "rgba(154, 0, 173, 1)"
-      },
-      "maxzoom": 7
+      }
     }
   ],
   "sprites": "https://raw.githubusercontent.com/klokantech/roman-empire-vector-map/gh-pages/sprite",

@@ -6,12 +6,23 @@ services:
 branches:
   only:
   - master
+addons:
+  apt:
+    sources:
+    - ubuntu-toolchain-r-test
+    - llvm-toolchain-precise-3.5
+    packages:
+    - libstdc++6
 before_install:
 - sudo apt-get -qq update
 - sudo apt-get install -y gzip
 script:
+- nvm install 4
+- nvm use 4
+- npm install
 - sudo service docker restart
 - git clone https://github.com/mapbox/mbutil.git
+- "./task/test.sh"
 - "./task/generate-tiles.sh"
 - "./task/deploy.sh"
 env:
