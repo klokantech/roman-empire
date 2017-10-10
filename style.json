@@ -17,6 +17,10 @@
       "type": "raster",
       "url": "https://klokantech.github.io/dare-raster-tiles/hillshade.json",
       "tileSize": 256
+    },
+    "provinces": {
+      "type": "vector",
+      "url": "https://gist.githubusercontent.com/jirik/6bc205608e98ed0630f1d7a37aa11ea0/raw/tile.json"
     }
   },
   "glyphs": "https://fonts.openmaptiles.org/{fontstack}/{range}.pbf",
@@ -41,7 +45,20 @@
       "maxzoom": 22,
       "paint": {
         "raster-opacity": 0.1
+      },
+      "layout": {
+        "visibility": "visible"
       }
+    },
+    {
+      "id": "provinces",
+      "type": "line",
+      "source": "provinces",
+      "source-layer": "provinces",
+      "paint": {
+        "line-color": "rgba(154, 0, 173, 1)"
+      },
+      "maxzoom": 7
     }
   ],
   "sprites": "https://raw.githubusercontent.com/klokantech/roman-empire-vector-map/gh-pages/sprite",
