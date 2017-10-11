@@ -1,0 +1,25 @@
+_prefs: 
+  mapid: ''
+  saveCenter: true
+_properties: {}
+attribution: ''
+bounds: 
+  - -180
+  - -85.0511
+  - 180
+  - 85.0511
+center: 
+  - 16.4355
+  - 37.562
+  - 5
+description: ''
+format: "png8:m=h"
+interactivity_layer: ''
+layers: null
+maxzoom: 12
+minzoom: 4
+name: DARE_style2
+source: "tmsource://c:/JohanÅhlfeldt_mapbox/sqlite_filer/DARE.tm2source"
+styles: 
+  - style.mss
+template: ''

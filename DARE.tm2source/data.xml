@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Map[]>
+<Map srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+
+<Parameters>
+  <Parameter name="center">-0.8569,51.2413,6</Parameter>
+  <Parameter name="description"><![CDATA[roads low, places, fortifications]]></Parameter>
+  <Parameter name="format">pbf</Parameter>
+  <Parameter name="json"><![CDATA[{"vector_layers":[{"id":"provinces","description":"provinces","fields":{"ogc_fid":"Number","name":"String"}},{"id":"roads_high","description":"","fields":{"ogc_fid":"Number","name":"String","descriptio":"String"}},{"id":"roads_low","description":"roads_low","fields":{"ogc_fid":"Number","major_or_m":"String","known_or_a":"String","name":"String"}},{"id":"provinces_label","description":"provinces_label","fields":{"ogc_fid":"Number","name":"String"}},{"id":"places","description":"places","fields":{"ogc_fid":"Number","id":"String","modern":"String","latin":"String","greek":"String","major":"Number","type":"String","building":"Number","accuracy":"Number","startyear":"String","endyear":"String"}}]}]]></Parameter>
+  <Parameter name="maxzoom">12</Parameter>
+  <Parameter name="minzoom">4</Parameter>
+  <Parameter name="name"><![CDATA[DARE]]></Parameter>
+</Parameters>
+
+
+<Layer name="provinces"
+  buffer-size="4"
+  srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
+    
+    <Datasource>
+       <Parameter name="file"><![CDATA[provinces.sqlite]]></Parameter>
+       <Parameter name="key_field"><![CDATA[]]></Parameter>
+       <Parameter name="table"><![CDATA[(select * from provinces)]]></Parameter>
+       <Parameter name="type"><![CDATA[sqlite]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Layer name="roads_high"
+  buffer-size="16"
+  srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
+    
+    <Datasource>
+       <Parameter name="file"><![CDATA[roads_high.sqlite]]></Parameter>
+       <Parameter name="key_field"><![CDATA[]]></Parameter>
+       <Parameter name="table"><![CDATA[(select * from roads_high)]]></Parameter>
+       <Parameter name="type"><![CDATA[sqlite]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Layer name="roads_low"
+  buffer-size="16"
+  srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
+    
+    <Datasource>
+       <Parameter name="file"><![CDATA[roads_low.sqlite]]></Parameter>
+       <Parameter name="key_field"><![CDATA[]]></Parameter>
+       <Parameter name="table"><![CDATA[(select * from roads_low)]]></Parameter>
+       <Parameter name="type"><![CDATA[sqlite]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Layer name="provinces_label"
+  buffer-size="64"
+  srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
+    
+    <Datasource>
+       <Parameter name="file"><![CDATA[provinces_label.sqlite]]></Parameter>
+       <Parameter name="key_field"><![CDATA[]]></Parameter>
+       <Parameter name="table"><![CDATA[(select * from provinces_label)]]></Parameter>
+       <Parameter name="type"><![CDATA[sqlite]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Layer name="places"
+  buffer-size="64"
+  srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
+    
+    <Datasource>
+       <Parameter name="file"><![CDATA[places.sqlite]]></Parameter>
+       <Parameter name="key_field"><![CDATA[]]></Parameter>
+       <Parameter name="table"><![CDATA[(select * from places)]]></Parameter>
+       <Parameter name="type"><![CDATA[sqlite]]></Parameter>
+    </Datasource>
+  </Layer>
+
+</Map>

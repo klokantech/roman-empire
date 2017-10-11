@@ -1,0 +1,93 @@
+_prefs: 
+  disabled: []
+  inspector: false
+  mapid: roman-vector.55d9e097
+  rev: s-c7847cb6
+  saveCenter: true
+attribution: ''
+center: 
+  - -0.8569
+  - 51.2413
+  - 6
+description: roads low, places, fortifications
+Layer: 
+  - id: provinces
+    Datasource: 
+      file: provinces.sqlite
+      key_field: ''
+      table: (select * from provinces)
+      type: sqlite
+    description: provinces
+    fields: 
+      name: String
+      ogc_fid: Number
+    properties: 
+      "buffer-size": 4
+    srs: +proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs
+  - id: roads_high
+    Datasource: 
+      file: roads_high.sqlite
+      key_field: ''
+      table: (select * from roads_high)
+      type: sqlite
+    description: ''
+    fields: 
+      descriptio: String
+      name: String
+      ogc_fid: Number
+    properties: 
+      "buffer-size": 16
+    srs: +proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs
+  - id: roads_low
+    Datasource: 
+      file: roads_low.sqlite
+      key_field: ''
+      table: (select * from roads_low)
+      type: sqlite
+    description: roads_low
+    fields: 
+      known_or_a: String
+      major_or_m: String
+      name: String
+      ogc_fid: Number
+    properties: 
+      "buffer-size": 16
+    srs: +proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs
+  - id: provinces_label
+    Datasource: 
+      file: provinces_label.sqlite
+      key_field: ''
+      table: (select * from provinces_label)
+      type: sqlite
+    description: provinces_label
+    fields: 
+      name: String
+      ogc_fid: Number
+    properties: 
+      "buffer-size": 64
+    srs: +proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs
+  - id: places
+    Datasource: 
+      file: places.sqlite
+      key_field: ''
+      table: (select * from places)
+      type: sqlite
+    description: places
+    fields: 
+      id: String
+      accuracy: Number
+      building: Number
+      endyear: String
+      greek: String
+      latin: String
+      major: Number
+      modern: String
+      ogc_fid: Number
+      startyear: String
+      type: String
+    properties: 
+      "buffer-size": 64
+    srs: +proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs
+maxzoom: 12
+minzoom: 4
+name: DARE
