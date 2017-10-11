@@ -47,7 +47,7 @@
         "visibility": "visible"
       },
       "paint": {
-        "raster-opacity": 0.1
+        "raster-opacity": 0.3
       }
     },
     {
@@ -58,6 +58,30 @@
       "maxzoom": 7,
       "paint": {
         "line-color": "rgba(154, 0, 173, 1)"
+      }
+    },
+    {
+      "id": "fortifications",
+      "type": "line",
+      "source": "roman-empire",
+      "source-layer": "fortifications",
+      "maxzoom": 22,
+      "paint": {
+        "line-color": "rgba(134, 52, 52, 1)"
+      }
+    },
+    {
+      "id": "provinces_label",
+      "type": "symbol",
+      "source": "roman-empire",
+      "source-layer": "provinces_label",
+      "maxzoom": 24,
+      "layout": {
+        "text-font": [
+          "Open Sans Regular"
+        ],
+        "text-field": "{name}",
+        "text-size": 12
       }
     }
   ],
