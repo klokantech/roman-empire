@@ -28,6 +28,9 @@
     {
       "id": "background",
       "type": "background",
+      "layout": {
+        "visibility": "visible"
+      },
       "paint": {
         "background-color": "rgba(255, 255, 255, 1)"
       }
@@ -75,13 +78,28 @@
       "type": "symbol",
       "source": "roman-empire",
       "source-layer": "provinces_label",
-      "maxzoom": 24,
+      "minzoom": 0,
+      "maxzoom": 7,
       "layout": {
+        "text-size": 14,
         "text-font": [
-          "Open Sans Regular"
+          "Klokantech Noto Sans Regular"
         ],
+        "visibility": "visible",
+        "text-offset": [
+          0,
+          0.5
+        ],
+        "icon-size": 1,
+        "text-anchor": "top",
         "text-field": "{name}",
-        "text-size": 12
+        "text-max-width": 8
+      },
+      "paint": {
+        "text-color": "rgba(27, 22, 22, 1)",
+        "text-halo-width": 1,
+        "text-halo-color": "rgba(255,255,255,0.75)",
+        "text-halo-blur": 1
       }
     }
   ],
