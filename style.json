@@ -58,9 +58,30 @@
       "type": "line",
       "source": "roman-empire",
       "source-layer": "provinces",
-      "maxzoom": 7,
+      "minzoom": 3,
+      "maxzoom": 6,
       "paint": {
-        "line-color": "rgba(154, 0, 173, 1)"
+        "line-color": "rgba(128, 0, 128, 1)",
+        "line-width": {
+          "stops": [
+            [
+              3,
+              1
+            ],
+            [
+              4,
+              1
+            ],
+            [
+              5,
+              1.5
+            ],
+            [
+              6,
+              1.5
+            ]
+          ]
+        }
       }
     },
     {
@@ -78,10 +99,33 @@
       "type": "symbol",
       "source": "roman-empire",
       "source-layer": "provinces_label",
-      "minzoom": 0,
+      "minzoom": 3,
       "maxzoom": 7,
       "layout": {
-        "text-size": 14,
+        "text-size": {
+          "stops": [
+            [
+              3,
+              10
+            ],
+            [
+              4,
+              10
+            ],
+            [
+              5,
+              12
+            ],
+            [
+              6,
+              12
+            ],
+            [
+              7,
+              14
+            ]
+          ]
+        },
         "text-font": [
           "Klokantech Noto Sans Regular"
         ],
@@ -96,10 +140,52 @@
         "text-max-width": 8
       },
       "paint": {
-        "text-color": "rgba(27, 22, 22, 1)",
+        "text-color": "rgba(0, 0, 0, 1)",
         "text-halo-width": 1,
-        "text-halo-color": "rgba(255,255,255,0.75)",
+        "text-halo-color": "rgba(255, 255, 255, 0.75)",
         "text-halo-blur": 1
+      }
+    },
+    {
+      "id": "places_low",
+      "type": "circle",
+      "source": "roman-empire",
+      "source-layer": "places",
+      "minzoom": 3,
+      "maxzoom": 7
+    },
+    {
+      "id": "roads_low",
+      "type": "line",
+      "source": "roman-empire",
+      "source-layer": "roads",
+      "minzoom": 3,
+      "maxzoom": 6,
+      "filter": [
+        "all"
+      ],
+      "paint": {
+        "line-color": "rgba(255, 0, 0, 0.6)",
+        "line-width": {
+          "stops": [
+            [
+              3,
+              1
+            ],
+            [
+              4,
+              1
+            ],
+            [
+              5,
+              1.5
+            ],
+            [
+              6,
+              1.5
+            ]
+          ]
+        }
       }
     }
   ],
