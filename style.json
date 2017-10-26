@@ -159,30 +159,76 @@
       "type": "line",
       "source": "roman-empire",
       "source-layer": "roads",
-      "minzoom": 3,
-      "maxzoom": 6,
+      "minzoom": 5,
+      "maxzoom": 12,
       "filter": [
-        "all"
+        "all",
+        [
+          "==",
+          "$type",
+          "LineString"
+        ],
+        [
+          "==",
+          "Major_or_M",
+          "1"
+        ]
       ],
       "paint": {
         "line-color": "rgba(255, 0, 0, 0.6)",
         "line-width": {
           "stops": [
             [
-              3,
+              5,
               1
             ],
             [
-              4,
-              1
+              7,
+              1.5
             ],
+            [
+              10,
+              1.75
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "roads_low_minor",
+      "type": "line",
+      "source": "roman-empire",
+      "source-layer": "roads",
+      "minzoom": 5,
+      "maxzoom": 12,
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "LineString"
+        ],
+        [
+          "==",
+          "Major_or_M",
+          "0"
+        ]
+      ],
+      "paint": {
+        "line-color": "rgba(185, 131, 131, 0.6)",
+        "line-width": {
+          "stops": [
             [
               5,
+              1
+            ],
+            [
+              7,
               1.5
             ],
             [
-              6,
-              1.5
+              10,
+              1.75
             ]
           ]
         }
