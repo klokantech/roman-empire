@@ -147,15 +147,43 @@
       }
     },
     {
-      "id": "places_low",
-      "type": "circle",
+      "id": "roads_low_minor",
+      "type": "line",
       "source": "roman-empire",
-      "source-layer": "places",
-      "minzoom": 3,
-      "maxzoom": 7
+      "source-layer": "roads",
+      "minzoom": 7,
+      "maxzoom": 12,
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "LineString"
+        ],
+        [
+          "==",
+          "Major_or_M",
+          "0"
+        ]
+      ],
+      "paint": {
+        "line-color": "rgba(193, 77, 77, 0.6)",
+        "line-width": {
+          "stops": [
+            [
+              7,
+              1
+            ],
+            [
+              10,
+              1.25
+            ]
+          ]
+        }
+      }
     },
     {
-      "id": "roads_low",
+      "id": "roads_low_major",
       "type": "line",
       "source": "roman-empire",
       "source-layer": "roads",
@@ -195,43 +223,24 @@
       }
     },
     {
-      "id": "roads_low_minor",
-      "type": "line",
+      "id": "places_major_fort",
+      "type": "symbol",
       "source": "roman-empire",
-      "source-layer": "roads",
-      "minzoom": 5,
-      "maxzoom": 12,
-      "filter": [
-        "all",
-        [
-          "==",
-          "$type",
-          "LineString"
-        ],
-        [
-          "==",
-          "Major_or_M",
-          "0"
-        ]
-      ],
-      "paint": {
-        "line-color": "rgba(185, 131, 131, 0.6)",
-        "line-width": {
-          "stops": [
-            [
-              5,
-              1
-            ],
-            [
-              7,
-              1.5
-            ],
-            [
-              10,
-              1.75
-            ]
-          ]
-        }
+      "source-layer": "places"
+    },
+    {
+      "id": "places_major_settlement",
+      "type": "symbol",
+      "source": "roman-empire",
+      "source-layer": "places",
+      "sprite": "icons",
+      "icon-image": "settlement.svg",
+      "settlement.svg": {
+        "width": 32,
+        "height": 32,
+        "x": 0,
+        "y": 0,
+        "pixelRatio": 1
       }
     }
   ],
