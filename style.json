@@ -227,15 +227,126 @@
       "id": "places_major_fort",
       "type": "symbol",
       "source": "roman-empire",
-      "source-layer": "places"
+      "source-layer": "places",
+      "minzoom": 6,
+      "maxzoom": 14,
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "Point"
+        ],
+        [
+          "==",
+          "type",
+          "17"
+        ]
+      ],
+      "layout": {
+        "icon-image": "square",
+        "icon-size": 1.5
+      },
+      "sprite": "icons"
     },
     {
       "id": "places_major_settlement",
       "type": "symbol",
       "source": "roman-empire",
       "source-layer": "places",
+      "minzoom": 6,
+      "maxzoom": 14,
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "Point"
+        ],
+        [
+          "==",
+          "type",
+          "11"
+        ]
+      ],
       "layout": {
-        "icon-image": "circle_11"
+        "icon-image": "settlement",
+        "icon-size": 1.3
+      },
+      "sprite": "icons"
+    },
+    {
+      "id": "places_civitasCapital",
+      "type": "symbol",
+      "source": "roman-empire",
+      "source-layer": "places",
+      "minzoom": 8,
+      "maxzoom": 14,
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "Point"
+        ],
+        [
+          "==",
+          "type",
+          "17"
+        ]
+      ],
+      "layout": {
+        "icon-image": "settlement"
+      },
+      "sprite": "icons"
+    },
+    {
+      "id": "places_settlement",
+      "type": "symbol",
+      "source": "roman-empire",
+      "source-layer": "places",
+      "minzoom": 6,
+      "maxzoom": 14,
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "Point"
+        ],
+        [
+          "==",
+          "type",
+          "12"
+        ]
+      ],
+      "layout": {
+        "icon-image": "settlement"
+      },
+      "sprite": "icons"
+    },
+    {
+      "id": "places_fort",
+      "type": "symbol",
+      "source": "roman-empire",
+      "source-layer": "places",
+      "minzoom": 8,
+      "maxzoom": 14,
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "Point"
+        ],
+        [
+          "==",
+          "type",
+          "18"
+        ]
+      ],
+      "layout": {
+        "icon-image": "square"
       },
       "sprite": "icons"
     }
