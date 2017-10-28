@@ -245,7 +245,19 @@
       ],
       "layout": {
         "icon-image": "square",
-        "icon-size": 1.5
+        "icon-size": {
+          "stops": [
+            [
+              6,
+              1.7
+            ],
+            [
+              10,
+              2
+            ]
+          ]
+        },
+        "icon-allow-overlap": true
       },
       "sprite": "icons"
     },
@@ -271,7 +283,19 @@
       ],
       "layout": {
         "icon-image": "settlement",
-        "icon-size": 1.3
+        "icon-size": {
+          "stops": [
+            [
+              6,
+              0.7
+            ],
+            [
+              10,
+              1.3
+            ]
+          ]
+        },
+        "icon-allow-overlap": true
       },
       "sprite": "icons"
     },
@@ -292,11 +316,27 @@
         [
           "==",
           "type",
-          "17"
+          13
         ]
       ],
       "layout": {
-        "icon-image": "settlement"
+        "icon-image": "settlement",
+        "icon-size": {
+          "stops": [
+            [
+              8,
+              0.6
+            ],
+            [
+              10,
+              0.8
+            ]
+          ]
+        },
+        "icon-allow-overlap": true
+      },
+      "paint": {
+        "text-opacity": 0.8
       },
       "sprite": "icons"
     },
@@ -305,7 +345,7 @@
       "type": "symbol",
       "source": "roman-empire",
       "source-layer": "places",
-      "minzoom": 6,
+      "minzoom": 8,
       "maxzoom": 14,
       "filter": [
         "all",
@@ -321,7 +361,23 @@
         ]
       ],
       "layout": {
-        "icon-image": "settlement"
+        "icon-image": "settlement",
+        "icon-size": {
+          "stops": [
+            [
+              8,
+              0.6
+            ],
+            [
+              10,
+              0.8
+            ]
+          ]
+        },
+        "icon-allow-overlap": true
+      },
+      "paint": {
+        "icon-opacity": 0.8
       },
       "sprite": "icons"
     },
@@ -346,9 +402,503 @@
         ]
       ],
       "layout": {
-        "icon-image": "square"
+        "icon-image": "square",
+        "icon-size": {
+          "stops": [
+            [
+              8,
+              1.3
+            ],
+            [
+              10,
+              1.6
+            ]
+          ]
+        },
+        "icon-allow-overlap": true
+      },
+      "paint": {
+        "icon-opacity": 0.8
       },
       "sprite": "icons"
+    },
+    {
+      "id": "places_fortlet",
+      "type": "symbol",
+      "source": "roman-empire",
+      "source-layer": "places",
+      "minzoom": 10,
+      "maxzoom": 14,
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "Point"
+        ],
+        [
+          "==",
+          "type",
+          53
+        ]
+      ],
+      "layout": {
+        "icon-image": "square",
+        "icon-size": 1,
+        "icon-allow-overlap": true
+      },
+      "paint": {
+        "icon-opacity": 0.6
+      },
+      "sprite": "icons"
+    },
+    {
+      "id": "places_costalStation",
+      "type": "symbol",
+      "source": "roman-empire",
+      "source-layer": "places",
+      "minzoom": 8,
+      "maxzoom": 14,
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "Point"
+        ],
+        [
+          "==",
+          "type",
+          "16"
+        ]
+      ],
+      "layout": {
+        "icon-image": "circle_11",
+        "icon-allow-overlap": true
+      },
+      "sprite": "icons"
+    },
+    {
+      "id": "places_ironAge",
+      "type": "symbol",
+      "source": "roman-empire",
+      "source-layer": "places",
+      "minzoom": 9,
+      "maxzoom": 14,
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "Point"
+        ],
+        [
+          "==",
+          "type",
+          "31"
+        ]
+      ],
+      "layout": {
+        "icon-image": "circle_11",
+        "icon-allow-overlap": true
+      },
+      "sprite": "icons"
+    },
+    {
+      "id": "places_lateRomanOppodium",
+      "type": "symbol",
+      "source": "roman-empire",
+      "source-layer": "places",
+      "minzoom": 9,
+      "maxzoom": 14,
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "Point"
+        ],
+        [
+          "==",
+          "type",
+          "35"
+        ]
+      ],
+      "layout": {
+        "icon-image": "circle_11",
+        "icon-allow-overlap": true
+      },
+      "sprite": "icons"
+    },
+    {
+      "id": "places_oasis",
+      "type": "symbol",
+      "source": "roman-empire",
+      "source-layer": "places",
+      "minzoom": 9,
+      "maxzoom": 14,
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "Point"
+        ],
+        [
+          "==",
+          "type",
+          "19"
+        ]
+      ],
+      "layout": {
+        "icon-image": "circle_11",
+        "icon-allow-overlap": true
+      },
+      "sprite": "icons"
+    },
+    {
+      "id": "places_bath",
+      "type": "symbol",
+      "source": "roman-empire",
+      "source-layer": "places",
+      "minzoom": 9,
+      "maxzoom": 14,
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "Point"
+        ],
+        [
+          "==",
+          "type",
+          "66"
+        ]
+      ],
+      "layout": {
+        "icon-image": "bath",
+        "icon-allow-overlap": true,
+        "icon-size": {
+          "stops": [
+            [
+              9,
+              0.6
+            ],
+            [
+              11,
+              0.8
+            ]
+          ]
+        }
+      },
+      "sprite": "icons"
+    },
+    {
+      "id": "places_sancOrTemp",
+      "type": "symbol",
+      "source": "roman-empire",
+      "source-layer": "places",
+      "minzoom": 9,
+      "maxzoom": 14,
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "Point"
+        ],
+        [
+          "==",
+          "type",
+          "61"
+        ]
+      ],
+      "layout": {
+        "icon-image": "circle_11",
+        "icon-allow-overlap": true
+      }
+    },
+    {
+      "id": "places_tumulus",
+      "type": "symbol",
+      "source": "roman-empire",
+      "source-layer": "places",
+      "minzoom": 10,
+      "maxzoom": 14,
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "Point"
+        ],
+        [
+          "==",
+          "type",
+          "32"
+        ]
+      ],
+      "layout": {
+        "icon-image": "circle_11",
+        "icon-allow-overlap": true
+      }
+    },
+    {
+      "id": "places_cemetery",
+      "type": "symbol",
+      "source": "roman-empire",
+      "source-layer": "places",
+      "minzoom": 10,
+      "maxzoom": 14,
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "Point"
+        ],
+        [
+          "==",
+          "type",
+          "63"
+        ]
+      ],
+      "layout": {
+        "icon-image": "circle_11",
+        "icon-allow-overlap": true
+      }
+    },
+    {
+      "id": "places_monastery",
+      "type": "symbol",
+      "source": "roman-empire",
+      "source-layer": "places",
+      "minzoom": 10,
+      "maxzoom": 14,
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "Point"
+        ],
+        [
+          "==",
+          "type",
+          "21"
+        ]
+      ],
+      "layout": {
+        "icon-image": "circle_11",
+        "icon-allow-overlap": true
+      }
+    },
+    {
+      "id": "places_church",
+      "type": "symbol",
+      "source": "roman-empire",
+      "source-layer": "places",
+      "minzoom": 10,
+      "maxzoom": 14,
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "Point"
+        ],
+        [
+          "==",
+          "type",
+          "24"
+        ]
+      ],
+      "layout": {
+        "icon-image": "circle_11",
+        "icon-allow-overlap": true
+      }
+    },
+    {
+      "id": "places_villa",
+      "type": "symbol",
+      "source": "roman-empire",
+      "source-layer": "places",
+      "minzoom": 10,
+      "maxzoom": 14,
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "Point"
+        ],
+        [
+          "==",
+          "type",
+          "14"
+        ]
+      ],
+      "layout": {
+        "icon-image": "circle_11",
+        "icon-allow-overlap": true
+      }
+    },
+    {
+      "id": "places_mine",
+      "type": "symbol",
+      "source": "roman-empire",
+      "source-layer": "places",
+      "minzoom": 10,
+      "maxzoom": 14,
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "Point"
+        ],
+        [
+          "==",
+          "type",
+          "49"
+        ]
+      ],
+      "layout": {
+        "icon-image": "circle_11",
+        "icon-allow-overlap": true
+      }
+    },
+    {
+      "id": "places_pass",
+      "type": "symbol",
+      "source": "roman-empire",
+      "source-layer": "places",
+      "minzoom": 10,
+      "maxzoom": 14,
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "Point"
+        ],
+        [
+          "==",
+          "type",
+          "49"
+        ]
+      ],
+      "layout": {
+        "icon-image": "circle_11",
+        "icon-allow-overlap": true
+      }
+    },
+    {
+      "id": "places_bridge",
+      "type": "symbol",
+      "source": "roman-empire",
+      "source-layer": "places",
+      "minzoom": 10,
+      "maxzoom": 14,
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "Point"
+        ],
+        [
+          "==",
+          "type",
+          "51"
+        ]
+      ],
+      "layout": {
+        "icon-image": "circle_11",
+        "icon-allow-overlap": true
+      }
+    },
+    {
+      "id": "places_roadMilestone",
+      "type": "circle",
+      "source": "roman-empire",
+      "source-layer": "places",
+      "minzoom": 10,
+      "maxzoom": 14,
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "Point"
+        ],
+        [
+          "==",
+          "type",
+          "55"
+        ]
+      ],
+      "layout": {},
+      "paint": {
+        "circle-color": "rgba(0, 0, 0, 1)",
+        "circle-radius": 3,
+        "circle-stroke-opacity": 0
+      }
+    },
+    {
+      "id": "places_aqueduct",
+      "type": "circle",
+      "source": "roman-empire",
+      "source-layer": "places",
+      "minzoom": 10,
+      "maxzoom": 14,
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "Point"
+        ],
+        [
+          "==",
+          "type",
+          "52"
+        ]
+      ],
+      "layout": {},
+      "paint": {
+        "circle-color": "rgba(0, 0, 0, 1)",
+        "circle-radius": 3,
+        "circle-stroke-opacity": 0
+      }
+    },
+    {
+      "id": "places_monument",
+      "type": "circle",
+      "source": "roman-empire",
+      "source-layer": "places",
+      "minzoom": 10,
+      "maxzoom": 14,
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "Point"
+        ],
+        [
+          "==",
+          "type",
+          "64"
+        ]
+      ],
+      "layout": {},
+      "paint": {
+        "circle-color": "rgba(0, 0, 0, 1)",
+        "circle-radius": 3,
+        "circle-stroke-opacity": 0
+      }
     }
   ],
   "id": "style"
