@@ -1,47 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Created with Inkscape (http://www.inkscape.org/) -->
-
 <svg
    xmlns:dc="http://purl.org/dc/elements/1.1/"
    xmlns:cc="http://creativecommons.org/ns#"
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="32"
-   height="32"
-   viewBox="0 0 8.4666665 8.4666669"
+   id="svg8"
    version="1.1"
-   id="svg3794"
-   inkscape:version="0.92.2 (5c3e80d, 2017-08-06)"
-   sodipodi:docname="settlement2.svg">
+   viewBox="0 0 16.933333 16.933333"
+   height="64"
+   width="64">
   <title
-     id="title4293">settlement</title>
+     id="title507">settlement</title>
   <defs
-     id="defs3788" />
-  <sodipodi:namedview
-     id="base"
-     pagecolor="#ffffff"
-     bordercolor="#666666"
-     borderopacity="1.0"
-     inkscape:pageopacity="0.0"
-     inkscape:pageshadow="2"
-     inkscape:zoom="2"
-     inkscape:cx="-87.142857"
-     inkscape:cy="79.5"
-     inkscape:document-units="mm"
-     inkscape:current-layer="layer1"
-     showgrid="false"
-     units="px"
-     inkscape:showpageshadow="false"
-     inkscape:window-width="1366"
-     inkscape:window-height="721"
-     inkscape:window-x="-4"
-     inkscape:window-y="-4"
-     inkscape:window-maximized="1" />
+     id="defs2" />
   <metadata
-     id="metadata3791">
+     id="metadata5">
     <rdf:RDF>
       <cc:Work
          rdf:about="">
@@ -53,28 +27,23 @@
     </rdf:RDF>
   </metadata>
   <g
-     inkscape:label="Layer 1"
-     inkscape:groupmode="layer"
-     id="layer1"
-     transform="translate(0,-288.53332)">
+     transform="translate(0,-280.06667)"
+     id="layer1">
     <g
-       id="g4291"
-       transform="matrix(0.01653646,0,0,0.01653645,0.69077667,289.42433)">
+       transform="matrix(0.03307291,0,0,0.03307291,1.4571504,281.603)"
+       id="g505">
       <path
-         id="path4275"
+         style="clip-rule:evenodd;fill:#ffffff;fill-rule:evenodd"
          d="M 119.668,21.864 C 97.355,32.666 78.279,46.107 62.675,60.859 30.797,90.997 4.656,136.266 0.683,190.843 c -4.123,56.646 10.864,97.933 32.996,130.983 22.476,33.564 54.449,60.555 87.989,75.991 41.342,19.026 94.52,25.054 139.982,15.998 43.087,-8.583 78.775,-28.744 107.986,-55.993 26.845,-25.041 50.06,-63.201 58.993,-104.987 10.139,-47.427 2.16,-98.776 -17.998,-137.982 C 377.274,49.976 302.342,-7.81 196.659,0.867 165.877,3.394 142.019,11.044 119.668,21.864 Z"
-         inkscape:connector-curvature="0"
-         style="clip-rule:evenodd;fill:#ffffff;fill-rule:evenodd" />
+         id="path489" />
       <path
-         id="path4277"
+         style="clip-rule:evenodd;fill-rule:evenodd"
          d="m 196.659,0.867 c 105.683,-8.677 180.615,49.109 213.973,113.986 20.158,39.206 28.137,90.556 17.998,137.982 -8.934,41.786 -32.148,79.946 -58.993,104.987 -29.211,27.249 -64.899,47.41 -107.986,55.993 -45.463,9.056 -98.641,3.028 -139.982,-15.998 C 88.129,382.38 56.156,355.39 33.68,321.826 11.547,288.775 -3.44,247.488 0.683,190.843 4.656,136.266 30.797,90.997 62.675,60.859 78.279,46.108 97.355,32.666 119.668,21.864 142.019,11.044 165.877,3.394 196.659,0.867 Z m -87.99,97.987 c -32.744,30.544 -60.798,86.32 -42.995,148.981 14.991,52.762 52.198,86.947 101.987,102.987 82.812,26.676 155.958,-16.848 185.977,-69.991 8.255,-14.615 14.913,-29.886 17.998,-49.994 C 381.832,164.383 348.604,114.944 312.644,88.855 287.378,70.526 249.877,55.663 206.657,58.859 163.921,62.02 129.747,79.193 108.669,98.854 Z"
-         inkscape:connector-curvature="0"
-         style="clip-rule:evenodd;fill-rule:evenodd" />
+         id="path491" />
       <path
-         id="path4279"
+         style="clip-rule:evenodd;fill:#ffffff;fill-rule:evenodd"
          d="m 206.657,58.859 c 43.221,-3.196 80.722,11.667 105.987,29.996 35.96,26.089 69.188,75.528 58.992,141.982 -3.085,20.108 -9.743,35.379 -17.998,49.994 -30.019,53.144 -103.165,96.667 -185.977,69.991 C 117.871,334.782 80.664,300.596 65.674,247.835 47.871,185.174 75.924,129.398 108.669,98.854 129.747,79.193 163.921,62.02 206.657,58.859 Z"
-         inkscape:connector-curvature="0"
-         style="clip-rule:evenodd;fill:#ffffff;fill-rule:evenodd" />
+         id="path493" />
     </g>
   </g>
 </svg>
