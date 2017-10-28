@@ -5,15 +5,15 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
-   id="svg4301"
+   id="svg8"
    version="1.1"
-   viewBox="0 0 8.4666659 8.4666659"
-   height="32"
-   width="32">
+   viewBox="0 0 16.933333 16.933333"
+   height="64"
+   width="64">
   <defs
-     id="defs4295" />
+     id="defs2" />
   <metadata
-     id="metadata4298">
+     id="metadata5">
     <rdf:RDF>
       <cc:Work
          rdf:about="">
@@ -25,15 +25,15 @@
     </rdf:RDF>
   </metadata>
   <g
-     transform="translate(0,-288.53334)"
+     transform="translate(0,-280.06667)"
      id="layer1">
     <g
-       transform="matrix(0.01823144,0,0,0.01823144,0.81280614,289.33485)"
-       id="g4782">
+       transform="matrix(0.03720703,0,0,0.03720703,1.7140265,281.91298)"
+       id="g489">
       <path
          style="clip-rule:evenodd;fill:#010101;fill-rule:evenodd"
          d="m 361.961,0.28 c 0,120.563 0,241.114 0,361.681 -120.635,0 -241.291,0 -361.921,0 C 0.2,241.401 -0.28,120.195 0.28,0.04 120.754,0.2 241.891,-0.28 361.961,0.28 Z"
-         id="path4780" />
+         id="path487" />
     </g>
   </g>
 </svg>
