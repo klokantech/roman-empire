@@ -734,7 +734,7 @@
         ]
       ],
       "layout": {
-        "icon-image": "diamond",
+        "icon-image": "diamond_red",
         "icon-allow-overlap": true,
         "icon-size": {
           "stops": [
