@@ -1094,7 +1094,7 @@
           ]
         },
         "text-padding": 2,
-        "symbol-avoid-edges": true
+        "symbol-avoid-edges": false
       },
       "paint": {
         "text-color": "rgba(0, 0, 0, 0.86)",
@@ -1169,7 +1169,7 @@
           ]
         },
         "text-padding": 2,
-        "symbol-avoid-edges": true
+        "symbol-avoid-edges": false
       },
       "paint": {
         "text-color": "rgba(0, 0, 0, 0.86)",
@@ -1229,7 +1229,7 @@
           ]
         },
         "text-padding": 2,
-        "symbol-avoid-edges": true
+        "symbol-avoid-edges": false
       },
       "paint": {
         "text-color": "rgba(182, 47, 46, 1)",
@@ -1294,7 +1294,7 @@
           ]
         },
         "text-padding": 2,
-        "symbol-avoid-edges": true
+        "symbol-avoid-edges": false
       },
       "paint": {
         "text-color": "rgba(0, 0, 0, 0.86)",
@@ -1354,7 +1354,7 @@
           ]
         },
         "text-padding": 2,
-        "symbol-avoid-edges": true
+        "symbol-avoid-edges": false
       },
       "paint": {
         "text-color": "rgba(0, 0, 0, 0.86)",
@@ -1415,7 +1415,7 @@
           ]
         },
         "text-padding": 2,
-        "symbol-avoid-edges": true
+        "symbol-avoid-edges": false
       },
       "paint": {
         "text-color": "rgba(0, 0, 0, 0.86)",
