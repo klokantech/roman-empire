@@ -709,7 +709,19 @@
       ],
       "layout": {
         "icon-image": "circle_brown",
-        "icon-allow-overlap": true
+        "icon-allow-overlap": true,
+        "icon-size": {
+          "stops": [
+            [
+              9,
+              0.3
+            ],
+            [
+              10,
+              0.5
+            ]
+          ]
+        }
       },
       "sprite": "icons"
     },
