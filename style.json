@@ -1255,7 +1255,7 @@
       }
     },
     {
-      "id": "label_settlement_civitas_fort",
+      "id": "label_civitas",
       "type": "symbol",
       "source": "roman-empire",
       "source-layer": "places",
@@ -1265,83 +1265,13 @@
         "any",
         [
           "==",
-          "type",
-          "12"
-        ],
-        [
-          "==",
-          "type",
-          "13"
-        ],
-        [
-          "==",
-          "type",
-          "18"
+          "major",
+          2
         ]
       ],
       "layout": {
         "text-font": [
-          "Open Sans Bold Italic"
-        ],
-        "text-max-width": 10,
-        "visibility": "visible",
-        "text-offset": [
-          0.5,
-          0.5
-        ],
-        "icon-size": 1,
-        "text-anchor": "top",
-        "text-field": "{modern}",
-        "text-allow-overlap": false,
-        "text-size": {
-          "stops": [
-            [
-              8,
-              10
-            ],
-            [
-              10,
-              12
-            ]
-          ]
-        },
-        "text-padding": 2,
-        "symbol-avoid-edges": false
-      },
-      "paint": {
-        "text-color": "rgba(0, 0, 0, 0.86)",
-        "text-halo-width": 1,
-        "text-halo-color": "rgba(255, 255, 255, 0.94)",
-        "text-halo-blur": 1,
-        "text-translate": [
-          1,
-          0
-        ]
-      }
-    },
-    {
-      "id": "label_majorFort",
-      "type": "symbol",
-      "source": "roman-empire",
-      "source-layer": "places",
-      "minzoom": 6,
-      "maxzoom": 14,
-      "filter": [
-        "all",
-        [
-          "==",
-          "$type",
-          "Point"
-        ],
-        [
-          "==",
-          "type",
-          "17"
-        ]
-      ],
-      "layout": {
-        "text-font": [
-          "Open Sans Bold Italic"
+          "Klokantech Noto Sans Bold"
         ],
         "text-max-width": 10,
         "visibility": "visible",
@@ -1356,7 +1286,7 @@
         "text-size": {
           "stops": [
             [
-              7,
+              8,
               10
             ],
             [
@@ -1366,7 +1296,8 @@
           ]
         },
         "text-padding": 2,
-        "symbol-avoid-edges": false
+        "symbol-avoid-edges": false,
+        "text-transform": "uppercase"
       },
       "paint": {
         "text-color": "rgba(0, 0, 0, 0.86)",
@@ -1380,7 +1311,7 @@
       }
     },
     {
-      "id": "label_majorSettlements",
+      "id": "label_major",
       "type": "symbol",
       "source": "roman-empire",
       "source-layer": "places",
@@ -1395,13 +1326,13 @@
         ],
         [
           "==",
-          "type",
-          "11"
+          "major",
+          1
         ]
       ],
       "layout": {
         "text-font": [
-          "Open Sans Bold"
+          "Klokantech Noto Sans Bold"
         ],
         "text-transform": "uppercase",
         "text-max-width": 10,
