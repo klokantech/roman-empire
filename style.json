@@ -380,11 +380,6 @@
         "all",
         [
           "==",
-          "$type",
-          "Point"
-        ],
-        [
-          "==",
           "type",
           "14"
         ]
@@ -892,7 +887,7 @@
       "type": "symbol",
       "source": "roman-empire",
       "source-layer": "places",
-      "minzoom": 6,
+      "minzoom": 5,
       "maxzoom": 14,
       "filter": [
         "all",
@@ -930,7 +925,7 @@
       "type": "symbol",
       "source": "roman-empire",
       "source-layer": "places",
-      "minzoom": 6,
+      "minzoom": 5,
       "maxzoom": 14,
       "filter": [
         "all",
@@ -1189,6 +1184,61 @@
       }
     },
     {
+      "id": "label_mountain",
+      "type": "symbol",
+      "source": "roman-empire",
+      "source-layer": "places",
+      "minzoom": 8,
+      "maxzoom": 15,
+      "filter": [
+        "all",
+        [
+          "==",
+          "major",
+          4
+        ]
+      ],
+      "layout": {
+        "text-font": [
+          "Klokantech Noto Sans Bold"
+        ],
+        "text-max-width": 10,
+        "visibility": "visible",
+        "text-offset": [
+          0.5,
+          0.5
+        ],
+        "icon-size": 1,
+        "text-anchor": "top",
+        "text-field": "{latin}",
+        "text-allow-overlap": false,
+        "text-size": {
+          "stops": [
+            [
+              6,
+              8
+            ],
+            [
+              10,
+              14
+            ]
+          ]
+        },
+        "text-padding": 2,
+        "symbol-avoid-edges": false
+      },
+      "paint": {
+        "text-color": "rgba(33, 30, 147, 0.86)",
+        "text-halo-width": 1,
+        "text-halo-color": "rgba(255, 255, 255, 0.94)",
+        "text-halo-blur": 1,
+        "text-translate": [
+          1,
+          0
+        ]
+      }
+    },
+    {
       "id": "label_natural",
       "type": "symbol",
       "source": "roman-empire",
@@ -1221,7 +1271,7 @@
           "stops": [
             [
               6,
-              11
+              8
             ],
             [
               10,
