@@ -1015,186 +1015,6 @@
       }
     },
     {
-      "id": "label_zoom10",
-      "type": "symbol",
-      "source": "roman-empire",
-      "source-layer": "places",
-      "minzoom": 10,
-      "maxzoom": 14,
-      "filter": [
-        "any",
-        [
-          "==",
-          "type",
-          "32"
-        ],
-        [
-          "==",
-          "type",
-          "63"
-        ],
-        [
-          "==",
-          "type",
-          "21"
-        ],
-        [
-          "==",
-          "type",
-          "24"
-        ],
-        [
-          "==",
-          "type",
-          "14"
-        ],
-        [
-          "==",
-          "type",
-          "57"
-        ],
-        [
-          "==",
-          "type",
-          "49"
-        ],
-        [
-          "==",
-          "type",
-          "51"
-        ],
-        [
-          "==",
-          "type",
-          "55"
-        ],
-        [
-          "==",
-          "type",
-          "52"
-        ],
-        [
-          "==",
-          "type",
-          "64"
-        ]
-      ],
-      "layout": {
-        "text-font": [
-          "Open Sans Bold Italic"
-        ],
-        "text-max-width": 10,
-        "visibility": "visible",
-        "text-offset": [
-          0.5,
-          0.5
-        ],
-        "icon-size": 1,
-        "text-anchor": "top",
-        "text-field": "{modern}",
-        "text-allow-overlap": false,
-        "text-size": {
-          "stops": [
-            [
-              9,
-              10
-            ],
-            [
-              11,
-              12
-            ]
-          ]
-        },
-        "text-padding": 2,
-        "symbol-avoid-edges": false
-      },
-      "paint": {
-        "text-color": "rgba(0, 0, 0, 0.86)",
-        "text-halo-width": 1,
-        "text-halo-color": "rgba(255, 255, 255, 0.94)",
-        "text-halo-blur": 1,
-        "text-translate": [
-          1,
-          0
-        ]
-      }
-    },
-    {
-      "id": "label_zoom9",
-      "type": "symbol",
-      "source": "roman-empire",
-      "source-layer": "places",
-      "minzoom": 9,
-      "maxzoom": 14,
-      "filter": [
-        "any",
-        [
-          "==",
-          "type",
-          "66"
-        ],
-        [
-          "==",
-          "type",
-          "61"
-        ],
-        [
-          "==",
-          "type",
-          "19"
-        ],
-        [
-          "==",
-          "type",
-          "35"
-        ],
-        [
-          "==",
-          "type",
-          "31"
-        ]
-      ],
-      "layout": {
-        "text-font": [
-          "Open Sans Bold Italic"
-        ],
-        "text-max-width": 10,
-        "visibility": "visible",
-        "text-offset": [
-          0.5,
-          0.5
-        ],
-        "icon-size": 1,
-        "text-anchor": "top",
-        "text-field": "{modern}",
-        "text-allow-overlap": false,
-        "text-size": {
-          "stops": [
-            [
-              9,
-              10
-            ],
-            [
-              11,
-              12
-            ]
-          ]
-        },
-        "text-padding": 2,
-        "symbol-avoid-edges": false
-      },
-      "paint": {
-        "text-color": "rgba(0, 0, 0, 0.86)",
-        "text-halo-width": 1,
-        "text-halo-color": "rgba(255, 255, 255, 0.94)",
-        "text-halo-blur": 1,
-        "text-translate": [
-          1,
-          0
-        ]
-      }
-    },
-    {
       "id": "label_costalStation",
       "type": "symbol",
       "source": "roman-empire",
@@ -1216,7 +1036,7 @@
       ],
       "layout": {
         "text-font": [
-          "Open Sans Bold Italic"
+          "Klokantech Noto Sans Bold"
         ],
         "text-max-width": 10,
         "visibility": "visible",
@@ -1241,7 +1061,8 @@
           ]
         },
         "text-padding": 2,
-        "symbol-avoid-edges": false
+        "symbol-avoid-edges": false,
+        "text-transform": "uppercase"
       },
       "paint": {
         "text-color": "rgba(182, 47, 46, 1)",
@@ -1354,6 +1175,176 @@
             [
               10,
               14
+            ]
+          ]
+        },
+        "text-padding": 2,
+        "symbol-avoid-edges": false
+      },
+      "paint": {
+        "text-color": "rgba(0, 0, 0, 0.86)",
+        "text-halo-width": 1,
+        "text-halo-color": "rgba(255, 255, 255, 0.94)",
+        "text-halo-blur": 1,
+        "text-translate": [
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "id": "label_natural",
+      "type": "symbol",
+      "source": "roman-empire",
+      "source-layer": "places",
+      "minzoom": 9,
+      "filter": [
+        "all",
+        [
+          "==",
+          "major",
+          3
+        ]
+      ],
+      "layout": {
+        "text-font": [
+          "Klokantech Noto Sans Bold"
+        ],
+        "text-max-width": 10,
+        "visibility": "visible",
+        "text-offset": [
+          0.5,
+          0.5
+        ],
+        "icon-size": 1,
+        "text-anchor": "top",
+        "text-field": "{latin}",
+        "text-allow-overlap": false,
+        "text-size": {
+          "stops": [
+            [
+              6,
+              11
+            ],
+            [
+              10,
+              14
+            ]
+          ]
+        },
+        "text-padding": 2,
+        "symbol-avoid-edges": false
+      },
+      "paint": {
+        "text-color": "rgba(33, 30, 147, 0.86)",
+        "text-halo-width": 1,
+        "text-halo-color": "rgba(255, 255, 255, 0.94)",
+        "text-halo-blur": 1,
+        "text-translate": [
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "id": "label_leftOver_latin",
+      "type": "symbol",
+      "source": "roman-empire",
+      "source-layer": "places",
+      "filter": [
+        "all",
+        [
+          "==",
+          "major",
+          0
+        ],
+        [
+          "==",
+          "ancient",
+          1
+        ]
+      ],
+      "layout": {
+        "text-font": [
+          "Klokantech Noto Sans Bold"
+        ],
+        "text-max-width": 10,
+        "visibility": "visible",
+        "text-offset": [
+          0.5,
+          0.5
+        ],
+        "icon-size": 1,
+        "text-anchor": "top",
+        "text-field": "{latin}",
+        "text-allow-overlap": false,
+        "text-size": {
+          "stops": [
+            [
+              6,
+              11
+            ],
+            [
+              10,
+              12
+            ]
+          ]
+        },
+        "text-padding": 2,
+        "symbol-avoid-edges": false
+      },
+      "paint": {
+        "text-color": "rgba(0, 0, 0, 0.86)",
+        "text-halo-width": 1,
+        "text-halo-color": "rgba(255, 255, 255, 0.94)",
+        "text-halo-blur": 1,
+        "text-translate": [
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "id": "label_leftOver_modern",
+      "type": "symbol",
+      "source": "roman-empire",
+      "source-layer": "places",
+      "filter": [
+        "all",
+        [
+          "==",
+          "major",
+          0
+        ],
+        [
+          "==",
+          "ancient",
+          0
+        ]
+      ],
+      "layout": {
+        "text-font": [
+          "Klokantech Noto Sans Italic"
+        ],
+        "text-max-width": 10,
+        "visibility": "visible",
+        "text-offset": [
+          0.5,
+          0.5
+        ],
+        "icon-size": 1,
+        "text-anchor": "top",
+        "text-field": "{modern}",
+        "text-allow-overlap": false,
+        "text-size": {
+          "stops": [
+            [
+              6,
+              11
+            ],
+            [
+              10,
+              12
             ]
           ]
         },
