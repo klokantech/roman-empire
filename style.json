@@ -176,7 +176,7 @@
       "type": "symbol",
       "source": "roman-empire",
       "source-layer": "places",
-      "minzoom": 10,
+      "minzoom": 9,
       "maxzoom": 14,
       "filter": [
         "all",
@@ -213,7 +213,7 @@
       "type": "symbol",
       "source": "roman-empire",
       "source-layer": "places",
-      "minzoom": 10,
+      "minzoom": 9,
       "maxzoom": 14,
       "filter": [
         "all",
@@ -250,7 +250,7 @@
       "type": "symbol",
       "source": "roman-empire",
       "source-layer": "places",
-      "minzoom": 10,
+      "minzoom": 9,
       "maxzoom": 14,
       "filter": [
         "all",
@@ -287,7 +287,7 @@
       "type": "symbol",
       "source": "roman-empire",
       "source-layer": "places",
-      "minzoom": 10,
+      "minzoom": 9,
       "maxzoom": 14,
       "filter": [
         "all",
@@ -324,7 +324,7 @@
       "type": "symbol",
       "source": "roman-empire",
       "source-layer": "places",
-      "minzoom": 10,
+      "minzoom": 9,
       "maxzoom": 14,
       "filter": [
         "all",
@@ -349,7 +349,7 @@
       "type": "symbol",
       "source": "roman-empire",
       "source-layer": "places",
-      "minzoom": 10,
+      "minzoom": 9,
       "maxzoom": 14,
       "filter": [
         "all",
@@ -374,7 +374,7 @@
       "type": "symbol",
       "source": "roman-empire",
       "source-layer": "places",
-      "minzoom": 10,
+      "minzoom": 9,
       "maxzoom": 14,
       "filter": [
         "all",
@@ -411,7 +411,7 @@
       "type": "symbol",
       "source": "roman-empire",
       "source-layer": "places",
-      "minzoom": 10,
+      "minzoom": 9,
       "maxzoom": 14,
       "filter": [
         "all",
@@ -448,7 +448,7 @@
       "type": "symbol",
       "source": "roman-empire",
       "source-layer": "places",
-      "minzoom": 10,
+      "minzoom": 9,
       "maxzoom": 14,
       "filter": [
         "all",
@@ -485,7 +485,7 @@
       "type": "symbol",
       "source": "roman-empire",
       "source-layer": "places",
-      "minzoom": 10,
+      "minzoom": 9,
       "maxzoom": 14,
       "filter": [
         "all",
@@ -522,7 +522,7 @@
       "type": "symbol",
       "source": "roman-empire",
       "source-layer": "places",
-      "minzoom": 10,
+      "minzoom": 9,
       "maxzoom": 14,
       "filter": [
         "all",
@@ -547,7 +547,7 @@
       "type": "symbol",
       "source": "roman-empire",
       "source-layer": "places",
-      "minzoom": 10,
+      "minzoom": 9,
       "maxzoom": 14,
       "filter": [
         "all",
@@ -577,7 +577,7 @@
       "type": "symbol",
       "source": "roman-empire",
       "source-layer": "places",
-      "minzoom": 9,
+      "minzoom": 8,
       "maxzoom": 14,
       "filter": [
         "all",
@@ -615,7 +615,7 @@
       "type": "symbol",
       "source": "roman-empire",
       "source-layer": "places",
-      "minzoom": 9,
+      "minzoom": 8,
       "maxzoom": 14,
       "filter": [
         "all",
@@ -640,7 +640,7 @@
       "type": "symbol",
       "source": "roman-empire",
       "source-layer": "places",
-      "minzoom": 9,
+      "minzoom": 8,
       "maxzoom": 14,
       "filter": [
         "all",
@@ -666,7 +666,7 @@
       "type": "symbol",
       "source": "roman-empire",
       "source-layer": "places",
-      "minzoom": 9,
+      "minzoom": 8,
       "maxzoom": 14,
       "filter": [
         "all",
@@ -692,7 +692,7 @@
       "type": "symbol",
       "source": "roman-empire",
       "source-layer": "places",
-      "minzoom": 9,
+      "minzoom": 8,
       "maxzoom": 14,
       "filter": [
         "all",
@@ -713,15 +713,16 @@
         "icon-size": {
           "stops": [
             [
-              9,
-              0.3
+              8,
+              0.2
             ],
             [
               10,
-              0.5
+              0.2
             ]
           ]
-        }
+        },
+        "text-size": 12
       },
       "sprite": "icons"
     },
@@ -768,7 +769,7 @@
       "type": "symbol",
       "source": "roman-empire",
       "source-layer": "places",
-      "minzoom": 8,
+      "minzoom": 7,
       "maxzoom": 14,
       "filter": [
         "all",
@@ -809,7 +810,7 @@
       "type": "symbol",
       "source": "roman-empire",
       "source-layer": "places",
-      "minzoom": 8,
+      "minzoom": 7,
       "maxzoom": 14,
       "filter": [
         "all",
@@ -850,7 +851,7 @@
       "type": "symbol",
       "source": "roman-empire",
       "source-layer": "places",
-      "minzoom": 8,
+      "minzoom": 7,
       "maxzoom": 14,
       "filter": [
         "all",
@@ -1025,11 +1026,6 @@
         "all",
         [
           "==",
-          "$type",
-          "Point"
-        ],
-        [
-          "==",
           "type",
           "16"
         ]
@@ -1051,7 +1047,7 @@
         "text-size": {
           "stops": [
             [
-              8,
+              7,
               10
             ],
             [
@@ -1080,7 +1076,7 @@
       "type": "symbol",
       "source": "roman-empire",
       "source-layer": "places",
-      "minzoom": 8,
+      "minzoom": 7,
       "maxzoom": 14,
       "filter": [
         "any",
@@ -1197,7 +1193,8 @@
       "type": "symbol",
       "source": "roman-empire",
       "source-layer": "places",
-      "minzoom": 9,
+      "minzoom": 8,
+      "maxzoom": 24,
       "filter": [
         "all",
         [
@@ -1251,6 +1248,7 @@
       "type": "symbol",
       "source": "roman-empire",
       "source-layer": "places",
+      "minzoom": 7,
       "filter": [
         "all",
         [
@@ -1262,6 +1260,11 @@
           "==",
           "ancient",
           1
+        ],
+        [
+          "!=",
+          "type",
+          16
         ]
       ],
       "layout": {
@@ -1281,7 +1284,7 @@
         "text-size": {
           "stops": [
             [
-              6,
+              7,
               11
             ],
             [
@@ -1309,6 +1312,8 @@
       "type": "symbol",
       "source": "roman-empire",
       "source-layer": "places",
+      "minzoom": 9,
+      "maxzoom": 15,
       "filter": [
         "all",
         [
@@ -1339,7 +1344,7 @@
         "text-size": {
           "stops": [
             [
-              6,
+              9,
               11
             ],
             [
