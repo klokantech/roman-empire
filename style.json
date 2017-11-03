@@ -101,7 +101,7 @@
       "source": "roman-empire",
       "source-layer": "roads",
       "minzoom": 7,
-      "maxzoom": 12,
+      "maxzoom": 14,
       "filter": [
         "all",
         [
@@ -137,7 +137,7 @@
       "source": "roman-empire",
       "source-layer": "roads",
       "minzoom": 5,
-      "maxzoom": 12,
+      "maxzoom": 14,
       "filter": [
         "all",
         [
@@ -1283,7 +1283,7 @@
         "symbol-avoid-edges": false
       },
       "paint": {
-        "text-color": "rgba(33, 30, 147, 0.86)",
+        "text-color": "rgba(147, 30, 30, 1)",
         "text-halo-width": 1,
         "text-halo-color": "rgba(255, 255, 255, 0.94)",
         "text-halo-blur": 1,
@@ -1408,6 +1408,58 @@
       },
       "paint": {
         "text-color": "rgba(0, 0, 0, 0.86)",
+        "text-halo-width": 1,
+        "text-halo-color": "rgba(255, 255, 255, 0.94)",
+        "text-halo-blur": 1,
+        "text-translate": [
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "id": "label_roads_major",
+      "type": "symbol",
+      "source": "roman-empire",
+      "source-layer": "roads",
+      "minzoom": 9,
+      "filter": [
+        "all",
+        [
+          "==",
+          "Major_or_M",
+          "1"
+        ]
+      ],
+      "layout": {
+        "text-font": [
+          "Klokantech Noto Sans Italic"
+        ],
+        "text-max-width": 10,
+        "visibility": "visible",
+        "icon-size": 1,
+        "text-anchor": "center",
+        "text-field": "{Name}",
+        "text-allow-overlap": false,
+        "text-size": {
+          "stops": [
+            [
+              9,
+              11
+            ],
+            [
+              10,
+              12
+            ]
+          ]
+        },
+        "text-padding": 2,
+        "symbol-avoid-edges": false,
+        "symbol-placement": "line",
+        "text-ignore-placement": false
+      },
+      "paint": {
+        "text-color": "rgba(146, 39, 33, 1)",
         "text-halo-width": 1,
         "text-halo-color": "rgba(255, 255, 255, 0.94)",
         "text-halo-blur": 1,
