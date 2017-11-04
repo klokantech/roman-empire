@@ -228,7 +228,7 @@
       ],
       "layout": {
         "icon-image": "circle",
-        "icon-allow-overlap": false,
+        "icon-allow-overlap": true,
         "icon-size": {
           "stops": [
             [
@@ -259,7 +259,7 @@
       ],
       "layout": {
         "icon-image": "circle",
-        "icon-allow-overlap": false,
+        "icon-allow-overlap": true,
         "icon-size": {
           "stops": [
             [
@@ -290,7 +290,7 @@
       ],
       "layout": {
         "icon-image": "circle",
-        "icon-allow-overlap": false,
+        "icon-allow-overlap": true,
         "icon-size": {
           "stops": [
             [
@@ -321,19 +321,7 @@
       ],
       "layout": {
         "icon-image": "lighthouse",
-        "icon-allow-overlap": false,
-        "icon-size": {
-          "stops": [
-            [
-              9,
-              1.4
-            ],
-            [
-              12,
-              1.7
-            ]
-          ]
-        }
+        "icon-allow-overlap": true
       }
     },
     {
@@ -352,19 +340,7 @@
       ],
       "layout": {
         "icon-image": "bridge",
-        "icon-allow-overlap": false,
-        "icon-size": {
-          "stops": [
-            [
-              9,
-              1.4
-            ],
-            [
-              12,
-              1.7
-            ]
-          ]
-        }
+        "icon-allow-overlap": true
       }
     },
     {
@@ -383,7 +359,7 @@
       ],
       "layout": {
         "icon-image": "pass",
-        "icon-allow-overlap": false
+        "icon-allow-overlap": true
       }
     },
     {
@@ -402,7 +378,7 @@
       ],
       "layout": {
         "icon-image": "production",
-        "icon-allow-overlap": false
+        "icon-allow-overlap": true
       }
     },
     {
@@ -421,7 +397,7 @@
       ],
       "layout": {
         "icon-image": "rapid",
-        "icon-allow-overlap": false
+        "icon-allow-overlap": true
       }
     },
     {
@@ -440,7 +416,7 @@
       ],
       "layout": {
         "icon-image": "mine",
-        "icon-allow-overlap": false
+        "icon-allow-overlap": true
       }
     },
     {
@@ -602,7 +578,7 @@
       ],
       "layout": {
         "icon-image": "rectangle",
-        "icon-size": 0.7,
+        "icon-size": 1,
         "icon-allow-overlap": true
       },
       "paint": {
