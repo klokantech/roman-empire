@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:osb="http://www.openswatchbook.org/uri/2009/osb"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   width="64"
+   height="64"
+   viewBox="0 0 16.933333 16.933333"
+   version="1.1"
+   id="svg8">
+  <title
+     id="title5981">rectangle</title>
+  <defs
+     id="defs2">
+    <linearGradient
+       osb:paint="solid"
+       id="linearGradient5942">
+      <stop
+         id="stop5940"
+         offset="0"
+         style="stop-color:#7f3f3f;stop-opacity:1;" />
+    </linearGradient>
+  </defs>
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>rectangle</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer1"
+     transform="translate(0,-280.06667)">
+    <g
+       id="g489"
+       transform="matrix(0.03720703,0,0,0.03720703,1.7140265,281.91298)" />
+  </g>
+  <rect
+     y="1.8477983"
+     x="1.7244445"
+     height="13.466006"
+     width="13.457076"
+     id="rect4504"
+     style="fill:none;fill-opacity:1;stroke-width:0.26458332;stroke:#000000;stroke-opacity:1;opacity:0.00000001" />
+  <rect
+     y="2.583051"
+     x="2.7265539"
+     height="10.403955"
+     width="11.551976"
+     id="rect5972"
+     style="opacity:0;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.26458332;stroke-opacity:1" />
+  <rect
+     y="2.583051"
+     x="2.7265539"
+     height="12.341243"
+     width="11.838983"
+     id="rect5977"
+     style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.52916664;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+</svg>
