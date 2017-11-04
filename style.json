@@ -306,6 +306,37 @@
       }
     },
     {
+      "id": "places_lighthouse",
+      "type": "symbol",
+      "source": "roman-empire",
+      "source-layer": "places",
+      "minzoom": 9,
+      "filter": [
+        "all",
+        [
+          "==",
+          "type",
+          76
+        ]
+      ],
+      "layout": {
+        "icon-image": "lighthouse",
+        "icon-allow-overlap": false,
+        "icon-size": {
+          "stops": [
+            [
+              9,
+              1.4
+            ],
+            [
+              12,
+              1.7
+            ]
+          ]
+        }
+      }
+    },
+    {
       "id": "places_bridge",
       "type": "symbol",
       "source": "roman-empire",
@@ -516,6 +547,30 @@
         "icon-image": "tumulus",
         "icon-allow-overlap": true
       }
+    },
+    {
+      "id": "places_camp",
+      "type": "symbol",
+      "source": "roman-empire",
+      "source-layer": "places",
+      "minzoom": 9,
+      "filter": [
+        "all",
+        [
+          "==",
+          "type",
+          15
+        ]
+      ],
+      "layout": {
+        "icon-image": "rectangle",
+        "icon-size": 0.7,
+        "icon-allow-overlap": true
+      },
+      "paint": {
+        "icon-opacity": 0.9
+      },
+      "sprite": "icons"
     },
     {
       "id": "places_fortlet",
