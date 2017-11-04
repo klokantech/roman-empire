@@ -6,22 +6,22 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
-   width="64"
-   height="64"
-   viewBox="0 0 16.933333 16.933333"
+   id="svg8"
    version="1.1"
-   id="svg8">
+   viewBox="0 0 16.933333 16.933333"
+   height="64"
+   width="64">
   <title
      id="title5981">rectangle</title>
   <defs
      id="defs2">
     <linearGradient
-       osb:paint="solid"
-       id="linearGradient5942">
+       id="linearGradient5942"
+       osb:paint="solid">
       <stop
-         id="stop5940"
+         style="stop-color:#7f3f3f;stop-opacity:1;"
          offset="0"
-         style="stop-color:#7f3f3f;stop-opacity:1;" />
+         id="stop5940" />
     </linearGradient>
   </defs>
   <metadata
@@ -37,31 +37,31 @@
     </rdf:RDF>
   </metadata>
   <g
-     id="layer1"
-     transform="translate(0,-280.06667)">
+     transform="translate(0,-280.06667)"
+     id="layer1">
     <g
-       id="g489"
-       transform="matrix(0.03720703,0,0,0.03720703,1.7140265,281.91298)" />
+       transform="matrix(0.03720703,0,0,0.03720703,1.7140265,281.91298)"
+       id="g489" />
   </g>
   <rect
-     y="1.8477983"
-     x="1.7244445"
-     height="13.466006"
-     width="13.457076"
+     style="fill:none;fill-opacity:1;stroke-width:0.26458332;stroke:#000000;stroke-opacity:1;opacity:0.00000001"
      id="rect4504"
-     style="fill:none;fill-opacity:1;stroke-width:0.26458332;stroke:#000000;stroke-opacity:1;opacity:0.00000001" />
+     width="13.457076"
+     height="13.466006"
+     x="1.7244445"
+     y="1.8477983" />
   <rect
-     y="2.583051"
-     x="2.7265539"
-     height="10.403955"
-     width="11.551976"
+     style="opacity:0;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.26458332;stroke-opacity:1"
      id="rect5972"
-     style="opacity:0;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.26458332;stroke-opacity:1" />
-  <rect
-     y="2.583051"
+     width="11.551976"
+     height="10.403955"
      x="2.7265539"
-     height="12.341243"
-     width="11.838983"
+     y="2.583051" />
+  <rect
+     style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.05833328;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
      id="rect5977"
-     style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.52916664;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+     width="11.838983"
+     height="12.341243"
+     x="2.7265539"
+     y="2.583051" />
 </svg>
