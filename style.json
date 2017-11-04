@@ -827,7 +827,7 @@
       "type": "symbol",
       "source": "roman-empire",
       "source-layer": "places",
-      "minzoom": 7,
+      "minzoom": 6,
       "filter": [
         "all",
         [
