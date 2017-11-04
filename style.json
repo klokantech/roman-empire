@@ -387,6 +387,44 @@
       }
     },
     {
+      "id": "places_production",
+      "type": "symbol",
+      "source": "roman-empire",
+      "source-layer": "places",
+      "minzoom": 9,
+      "filter": [
+        "all",
+        [
+          "==",
+          "type",
+          "58"
+        ]
+      ],
+      "layout": {
+        "icon-image": "production",
+        "icon-allow-overlap": false
+      }
+    },
+    {
+      "id": "places_rapid",
+      "type": "symbol",
+      "source": "roman-empire",
+      "source-layer": "places",
+      "minzoom": 9,
+      "filter": [
+        "all",
+        [
+          "==",
+          "type",
+          "43"
+        ]
+      ],
+      "layout": {
+        "icon-image": "rapid",
+        "icon-allow-overlap": false
+      }
+    },
+    {
       "id": "places_mine",
       "type": "symbol",
       "source": "roman-empire",
@@ -397,7 +435,7 @@
         [
           "==",
           "type",
-          "49"
+          "57"
         ]
       ],
       "layout": {
