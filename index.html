@@ -10,19 +10,46 @@
   <style>
     body { margin:0; padding:0; }
     #map { position:absolute; top:0; bottom:0; width:100%; }
+    #lang {position:absolute;left:10px;bottom:10px;}
   </style>
 </head>
 <body>
-  <div id='map'></div>
+  <div id="map"></div>
+  <select id="lang" onchange="updateStyle()">
+    <option value="latin">Latin</option>
+    <option value="greek">Greek</option>
+    <option value="modern">Modern</option>
+  </select>
   <script>
+      var STYLE_JSON_URL = "style.json";
+      var STYLE_JSON;
+
       mapboxgl.setRTLTextPlugin('https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-rtl-text/v0.1.0/mapbox-gl-rtl-text.js');
       var map = new mapboxgl.Map({
         container: 'map',
-        style: 'style.json',
         attributionControl: true,
         hash: true
       });
-      map.addControl(new mapboxgl.NavigationControl());
+
+      var langEl = document.getElementById('lang');
+      var updateStyle = function() {
+        if (!STYLE_JSON) return;
+        var language = langEl.value;
+        var style = JSON.stringify(STYLE_JSON);
+        style = style.replace(/\{(latin)\}/gi, '{' + language + '}');
+        if (language == 'greek') {
+          style = style.replace(/\"uppercase\"/gi, '"none"');
+        }
+        map.setStyle(JSON.parse(style));
+      };
+
+      var oReq = new XMLHttpRequest();
+      oReq.onload = function() {
+        STYLE_JSON = JSON.parse(this.responseText);
+        updateStyle();
+      };
+      oReq.open('get', STYLE_JSON_URL, true);
+      oReq.send();
   </script>
 </body>
 </html>
