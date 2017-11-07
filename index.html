@@ -30,7 +30,8 @@
         attributionControl: true,
         hash: true
       });
-
+      map.addControl(new mapboxgl.NavigationControl());
+    
       var langEl = document.getElementById('lang');
       var updateStyle = function() {
         if (!STYLE_JSON) return;
