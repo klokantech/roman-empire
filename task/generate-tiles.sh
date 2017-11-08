@@ -7,7 +7,7 @@ docker run -it --rm -v $(pwd)/data:/data -v $(pwd)/build:/build \
     -B 0 \
     -z 7 \
     --no-tile-stats \
-    --layer=10_lakes \
+    --layer=10m_lakes \
     --output=/build/10m_lakes.mbtiles \
     /data/10m_lakes.geojson
 docker run -it --rm -v $(pwd)/data:/data -v $(pwd)/build:/build \
