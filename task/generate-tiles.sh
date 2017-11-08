@@ -5,6 +5,7 @@ rm -rf build/*
 docker run -it --rm -v $(pwd)/data:/data -v $(pwd)/build:/build \
     klokantech/tippecanoe tippecanoe \
     -B 0 \
+    -Z 0 \
     -z 7 \
     --no-tile-stats \
     --layer=10m_lakes \
@@ -13,6 +14,7 @@ docker run -it --rm -v $(pwd)/data:/data -v $(pwd)/build:/build \
 docker run -it --rm -v $(pwd)/data:/data -v $(pwd)/build:/build \
     klokantech/tippecanoe tippecanoe \
     -B 0 \
+    -Z 0 \
     -z 7 \
     --no-tile-stats \
     --layer=10m_rivers \
