@@ -20,7 +20,7 @@ docker run -it --rm -v $(pwd)/data:/data -v $(pwd)/build:/build \
 # fortifications
 docker run -it --rm -v $(pwd)/data:/data -v $(pwd)/build:/build \
     klokantech/tippecanoe tippecanoe \
-    -Z 8 \
+    -Z 6 \
     -z 11 \
     --no-tile-stats \
     --layer=fortifications \
@@ -55,8 +55,8 @@ docker run -it --rm -v $(pwd)/data:/data -v $(pwd)/build:/build \
     /data/places_low.geojson
 docker run -it --rm -v $(pwd)/data:/data -v $(pwd)/build:/build \
     klokantech/tippecanoe tippecanoe \
-    -B 8 \
-    -Z 8 \
+    -B 6 \
+    -Z 6 \
     -z 11 \
     --no-tile-stats \
     --layer=places \
@@ -64,8 +64,8 @@ docker run -it --rm -v $(pwd)/data:/data -v $(pwd)/build:/build \
     /data/places_medium.geojson
 docker run -it --rm -v $(pwd)/data:/data -v $(pwd)/build:/build \
     klokantech/tippecanoe tippecanoe \
-    -B 10 \
-    -Z 10 \
+    -B 9 \
+    -Z 9 \
     -z 11 \
     --no-tile-stats \
     --layer=places \
