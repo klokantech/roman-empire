@@ -1,6 +1,23 @@
 #!/usr/bin/env bash
 mkdir -p build
 rm -rf build/*
+# rivers and lakes
+docker run -it --rm -v $(pwd)/data:/data -v $(pwd)/build:/build \
+    klokantech/tippecanoe tippecanoe \
+    -B 0 \
+    -z 7 \
+    --no-tile-stats \
+    --layer=provinces_label \
+    --output=/build/10m_lakes.mbtiles \
+    /data/10m_lakes.geojson
+docker run -it --rm -v $(pwd)/data:/data -v $(pwd)/build:/build \
+    klokantech/tippecanoe tippecanoe \
+    -B 0 \
+    -z 7 \
+    --no-tile-stats \
+    --layer=provinces_label \
+    --output=/build/10m_rivers.mbtiles \
+    /data/10m_rivers_lake_centerlines.geojson
 # provinces
 docker run -it --rm -v $(pwd)/data:/data -v $(pwd)/build:/build \
     klokantech/tippecanoe tippecanoe \
@@ -86,7 +103,9 @@ docker run -it --rm -v $(pwd)/data:/data -v $(pwd)/build:/build \
     /build/places_high.mbtiles \
     /build/fortifications.mbtiles \
     /build/provinces.mbtiles \
-    /build/provinces_label.mbtiles
+    /build/provinces_label.mbtiles \ 
+    /build/10m_lakes.mbtiles \
+    /build/10m_rivers.mbtiles
 
 cd build
 find . -name '*.mbtiles' ! -name 'roman-empire.mbtiles' -type f -exec rm -f {} +
