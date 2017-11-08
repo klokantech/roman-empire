@@ -7,7 +7,7 @@ docker run -it --rm -v $(pwd)/data:/data -v $(pwd)/build:/build \
     -B 0 \
     -z 7 \
     --no-tile-stats \
-    --layer=provinces_label \
+    --layer=10_lakes \
     --output=/build/10m_lakes.mbtiles \
     /data/10m_lakes.geojson
 docker run -it --rm -v $(pwd)/data:/data -v $(pwd)/build:/build \
@@ -15,7 +15,7 @@ docker run -it --rm -v $(pwd)/data:/data -v $(pwd)/build:/build \
     -B 0 \
     -z 7 \
     --no-tile-stats \
-    --layer=provinces_label \
+    --layer=10m_rivers \
     --output=/build/10m_rivers.mbtiles \
     /data/10m_rivers_lake_centerlines.geojson
 # provinces
