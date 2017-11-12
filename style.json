@@ -203,7 +203,8 @@
         "icon-size": 1,
         "text-anchor": "top",
         "text-field": "{name}",
-        "text-max-width": 8
+        "text-max-width": 8,
+        "text-allow-overlap": true
       },
       "paint": {
         "text-color": "rgba(128, 0, 128, 1)",
