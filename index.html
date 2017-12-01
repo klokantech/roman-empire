@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,25 +9,352 @@
   <style>
     body { margin:0; padding:0; }
     #map { position:absolute; top:0; bottom:0; width:100%; }
-    #lang {position:absolute;left:10px;top:10px;}
+    #lang {position:relative}
+ 
+ .ui-select {
+  position:absolute;
+  font-size:12px;
+  top:10px;
+  left:70px;
+  z-index:100;
+  padding:1px;
+  border:1px solid black;
+  border-radius:1px;
+  }
+
+
+table {
+    border:none;
+    border-collapse: collapse;
+}
+
+table td.seperated, th.seperated {
+ 
+    border-right: 1px solid #000;
+}
+
+
+
   </style>
 </head>
 <body>
   <div id="map"></div>
-  <select id="lang" onchange="updateStyle()">
-    <option value="latin">Latin</option>
-    <option value="greek">Greek</option>
-    <option value="modern">Modern</option>
-  </select>
+
+<div class="ui-select">
+  <div>
+<table style="background-color: rgba(255,255,255,1);">
+
+	<!--firt row-->
+    <tr>
+       <th class="seperated"><b>Time period</th><th>Switch On/Off</th><th class="seperated">Legend</th><th>Switch On/Off</th><th class="seperated">Legend</th><th>Switch On/Off</th><th>Legend</th><th class="seperated">Select Language</th>
+	</tr>
+	
+	<!--second row-->
+	<tr>
+		<td class="seperated">
+			<input id="archaic" type="checkbox">&nbsp;&nbsp;Archaic
+		</td>
+
+		<td>
+			<input class="placeFilter" id= "places_major_settlement" type="checkbox" onclick="onOffLayer('places_major_settlement')" checked>&nbsp;&nbsp;Major Settlement
+		</td>
+		
+		<td align="center" class="seperated">
+			<img src="settlement.svg" height="15">
+		</td>
+		
+		<td>
+			<input class="placeFilter" id= "places_major_fort" type="checkbox" onclick="onOffLayer('places_major_fort')" checked>&nbsp;&nbsp;Major Fort
+		</td>
+		
+		<td align="center" class="seperated">
+			<img src="square.svg" height="15">
+		</td>
+		
+		<td>
+			<input class="placeFilter" id= "places_civitasCapital" type="checkbox" onclick="onOffLayer('places_civitasCapital')" checked>&nbsp;&nbsp;Civitas capital 
+		</td>
+		
+		<td align="center">
+			<img src="settlement.svg" height="12">
+		</td>
+		<td>
+			<select id="lang" onchange="updateStyle()">-->
+				<option value="latin">Latin</option>
+				<option value="greek">Greek</option>
+				<option value="modern">Modern</option>
+			</select>
+		</td>
+		
+		
+	</tr>
+	
+	<!--third row-->
+	<tr>
+		<td>
+			<input id="classical" type="checkbox">&nbsp;&nbsp;Classical
+		</td>
+		<td>
+			<input class="placeFilter" id= 'places_settlement' type="checkbox" onclick="onOffLayer('places_settlement')" checked>&nbsp;&nbsp;Settlement
+		</td>
+		
+		<td align="center">
+			<img src="settlement.svg" height="10">
+		</td>
+		
+		<!--minor settlement has to be added in the style sheet-->
+		<td>
+			<input class="placeFilter" id= "places_minor_settlement" type="checkbox" onclick="onOffLayer('places_minor_settlement')" checked>&nbsp;&nbsp;Minor Settlement
+		</td>
+		
+		<td align="center">
+			<img src="settlement.svg" height="8">
+		</td>
+		
+		<td>
+			<input class="placeFilter" id= "places_fort" type="checkbox" onclick="onOffLayer('places_fort')" checked>&nbsp;&nbsp;Fort 
+		</td>
+		
+		<td align="center">
+			<img src="square.svg" height="12">
+		</td>
+	</tr>
+	
+	<!--fourth row-->
+	<tr>
+		<td>
+			<input id="hellenistic" type="checkbox">&nbsp;&nbsp;Hellenistic
+		</td>
+		
+		<td>
+			<input class="placeFilter" id= 'places_fortlet' type="checkbox" onclick="onOffLayer('places_fortlet')" checked>&nbsp;&nbsp;Fortlet
+		</td>
+		
+		<td align="center">
+			<img src="square.svg" height="10">
+		</td>
+		
+		<td>
+			<input class="placeFilter" id= 'places_camp' type="checkbox" onclick="onOffLayer('places_camp')" checked>&nbsp;&nbsp;Camp
+		</td>
+		
+		<td align="center">
+			<img src="rectangle.svg" height="12">
+		</td>
+		
+		<td>
+			<input class="placeFilter" id= 'places_costalStation' type="checkbox" onclick="onOffLayer('places_costalStation')" checked>&nbsp;&nbsp;Road or Costal Station
+		</td>
+		
+		<td align="center">
+			<img src="diamond_red.svg" height="14">
+		</td>
+	</tr>
+
+
+	
+	<!--fifth row-->
+	<tr>
+		<td>
+			<input id="roman" type="checkbox">&nbsp;&nbsp;Roman
+		</td>
+
+		<td>
+			<input class="placeFilter" id= 'places_ironAge' type="checkbox" onclick="onOffLayer('places_ironAge')" checked>&nbsp;&nbsp;Iron Age (Celtic) Oppidum
+		</td>
+		
+		<td align="center">
+			<img src="circle_brown.svg" height="12">
+		</td>
+		
+		<td>
+			<input class="placeFilter" id= 'places_lateRomanOppodium' type="checkbox" onclick="onOffLayer('places_lateRomanOppodium')" checked>&nbsp;&nbsp;Late Roman Oppidum
+		</td>
+		
+		<td align="center">
+			<img src="circle.svg" height="12">
+		</td>
+		
+		<td>
+			<input class="placeFilter" id= 'places_oasis' type="checkbox" onclick="onOffLayer('places_oasis')" checked>&nbsp;&nbsp;Oasis
+		</td>
+		
+		<td align="center">
+			<img src="oasis.svg" height="16">
+		</td>
+	</tr>
+	
+	<!--sixth row-->
+	<tr>
+		<td>
+			<input id="lateAntique" type="checkbox">&nbsp;&nbsp;Late Antique
+		</td>
+
+		<td>
+			<input class="placeFilter" id= 'places_sancOrTemp' type="checkbox" onclick="onOffLayer('places_sancOrTemp')" checked>&nbsp;&nbsp;Sanctuary or temple
+		</td>
+		
+		<td align="center">
+			<img src="star.svg" height="13">
+		</td>
+		
+		<td>
+			<input class="placeFilter" id= 'places_bath' type="checkbox" onclick="onOffLayer('places_bath')" checked>&nbsp;&nbsp;Bath
+		</td>
+		
+		<td align="center">
+			<img src="bath.svg" height="15">
+		</td>
+		
+		<td>
+			<input class="placeFilter" id= 'places_tumulus' type="checkbox" onclick="onOffLayer('places_tumulus')" checked>&nbsp;&nbsp;Tumulus
+		</td>
+		
+		<td align="center">
+			<img src="tumulus.svg" height="16">
+		</td>
+	</tr>
+	
+	<!--seventh row-->
+	<tr>
+		<td>
+			<!--empty-->
+		</td>
+		
+		<td>
+			<input class="placeFilter" id= 'places_cemetery' type="checkbox" onclick="onOffLayer('places_cemetery')" checked>&nbsp;&nbsp;Cemetery
+		</td>
+		
+		<td align="center">
+			<img src="cemetery.svg" height="13">
+		</td>
+		
+		<td>
+			<input class="placeFilter" id= 'places_monastery' type="checkbox" onclick="onOffLayer('places_monastery')" checked>&nbsp;&nbsp;Monastery
+		</td>
+		
+		<td align="center">
+			<img src="monastery.svg" height="13">
+		</td>
+		
+		<td>
+			<input class="placeFilter" id= 'places_church' type="checkbox" onclick="onOffLayer('places_church')" checked>&nbsp;&nbsp;Church
+		</td>
+		
+		<td align="center">
+			<img src="church.svg" height="13">
+		</td>
+		
+	<!--eight row-->
+	<tr>
+		<td>
+			<!--empty-->
+		</td>
+		
+		<td>
+			<input class="placeFilter" id= 'places_villa' type="checkbox" onclick="onOffLayer('places_villa')" checked>&nbsp;&nbsp;Villa
+		</td>
+		
+		<td align="center">
+			<img src="villa.svg" height="13">
+		</td>
+		
+		<td>
+			<input class="placeFilter" id= 'places_mine' type="checkbox" onclick="onOffLayer('places_mine')" checked>&nbsp;&nbsp;Mine, quarry
+		</td>
+		
+		<td align="center">
+			<img src="mine.svg" height="13">
+		</td>
+		
+		<td>
+			<input class="placeFilter" id= 'places_production' type="checkbox" onclick="onOffLayer('places_production')" checked>&nbsp;&nbsp;Production, kiln
+		</td>
+		
+		<td align="center">
+			<img src="mine.svg" height="13">
+		</td>
+	</tr>
+	
+	<!--ninth row-->
+	<tr>
+		<td>
+			<!--empty-->
+		</td>
+		
+		<td>
+			<input class="placeFilter" id= 'places_pass' type="checkbox" onclick="onOffLayer('places_pass')" checked>&nbsp;&nbsp;Pass
+		</td>
+		
+		<td align="center">
+			<img src="pass.svg" height="13">
+		</td>
+		
+		<td>
+			<input class="placeFilter" id= 'places_bridge' type="checkbox" onclick="onOffLayer('places_bridge')" checked>&nbsp;&nbsp;Bridge
+		</td>
+		
+		<td align="center">
+			<img src="bridge.svg" height="13">
+		</td>
+		
+		<td>
+			<input class="placeFilter" id= 'places_production' type="checkbox" onclick="onOffLayer('places_production')" checked>&nbsp;&nbsp;Road/milestone
+		</td>
+		
+		<td align="center">
+			<img src="circle.svg" height="6">
+		</td>
+	</tr>
+	
+	<!--tenth row-->
+	<tr>
+		<td>
+			<!--empty-->
+		</td>
+		
+		<td>
+			<input class="placeFilter" id= 'places_lighthouse' type="checkbox" onclick="onOffLayer('places_lighthouse')" checked>&nbsp;&nbsp;Lighthouse
+		</td>
+		
+		<td align="center">
+			<img src="lighthouse.svg" height="13">
+		</td>
+		
+		<td>
+			<input class="placeFilter" id= 'places_aqueduct' type="checkbox" onclick="onOffLayer('places_aqueduct')" checked>&nbsp;&nbsp;Aqueduct/dam/cistern/spring/well
+		</td>
+		
+		<td align="center">
+			<img src="circle.svg" height="6">
+		</td>
+		
+		<td>
+			<input class="placeFilter" id= 'places_rapid' type="checkbox" onclick="onOffLayer('places_rapid')" checked>&nbsp;&nbsp;Rapid
+		</td>
+		
+		<td align="center">
+			<img src="rapid.svg" height="6">
+		</td>
+	</tr>
+	
+	
+</table>
+
+</div>
+  
+
   <script>
       var STYLE_JSON_URL = "style.json";
       var STYLE_JSON;
-
       mapboxgl.setRTLTextPlugin('https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-rtl-text/v0.1.0/mapbox-gl-rtl-text.js');
       var map = new mapboxgl.Map({
         container: 'map',
         attributionControl: true,
-        hash: true
+        hash: true,
+		center: [12, 44],
+		zoom: 5,
+	
       });
       map.addControl(new mapboxgl.NavigationControl());
     
@@ -43,7 +369,6 @@
         }
         map.setStyle(JSON.parse(style));
       };
-
       var oReq = new XMLHttpRequest();
       oReq.onload = function() {
         STYLE_JSON = JSON.parse(this.responseText);
@@ -51,6 +376,83 @@
       };
       oReq.open('get', STYLE_JSON_URL, true);
       oReq.send();
+	
+
+		var listLayerID = [['places_major_settlement', "11"],['places_major_fort', "17"], 
+		['places_villa', "14"], ['places_monument', "64"], ['places_aqueduct', "52"], 
+		['places_roadMilestone', "52"], ['places_lighthouse', "76"],['places_bridge', "51"], 
+		['places_pass', "49"],['places_production', "58"], ['places_rapid', "43"], ['places_mine', "57"], 
+		['places_church', "24"], ['places_monastery', "21"], ['places_cemetery', "63"], ['places_camp', "15"], 
+		['places_fortlet', "53"], ['places_bath', "66"], ['places_sancOrTemp', "61"], ['places_oasis', "19"], 
+		['places_lateRomanOppodium', "35"], ['places_ironAge', "31"], ['places_costalStation', "16"], ['places_fort', "18"],
+		['places_settlement', "12"],['places_civitasCapital', "13"], ['places_tumulus', "32"]]	
+	  	
+		
+		document.getElementById('archaic').onclick = function() {
+		for (var i = 0; i < listLayerID.length; i++) {
+		 if (this.checked) {
+		  map.setFilter(listLayerID[i][0], ["all",['==', 'type', listLayerID[i][1]],['<', 'startyear', -550],['>', 'endyear', -750]]);
+		 }
+		 else {
+		 map.setFilter(listLayerID[i][0], ['==', 'type', listLayerID[i][1]])
+		 }
+		 }
+		 };
+		 
+		 document.getElementById('classical').onclick = function() {
+		for (var i = 0; i < listLayerID.length; i++) {
+		 if (this.checked) {
+		  map.setFilter(listLayerID[i][0], ["all",['==', 'type', listLayerID[i][1]],['<', 'startyear', -330],['>', 'endyear', -550]]);
+		 }
+		 else {
+		 map.setFilter(listLayerID[i][0], ['==', 'type', listLayerID[i][1]])
+		 }
+		 }
+		 };
+		 
+		document.getElementById('hellenistic').onclick = function() {
+		for (var i = 0; i < listLayerID.length; i++) {
+		 if (this.checked) {
+		  map.setFilter(listLayerID[i][0], ["all",['==', 'type', listLayerID[i][1]],['<', 'startyear', -30],['>', 'endyear', -330]]);
+		 }
+		 else {
+		 map.setFilter(listLayerID[i][0], ['==', 'type', listLayerID[i][1]])
+		 }
+		 }
+		 };
+		 
+	    document.getElementById('roman').onclick = function() {
+		for (var i = 0; i < listLayerID.length; i++) {
+		 if (this.checked) {
+		  map.setFilter(listLayerID[i][0], ["all",['==', 'type', listLayerID[i][1]],['<', 'startyear', 300],['>', 'endyear', -30]]);
+		 }
+		 else {
+		 map.setFilter(listLayerID[i][0], ['==', 'type', listLayerID[i][1]])
+		 }
+		 }
+		 };
+		 
+	   document.getElementById('lateAntique').onclick = function() {
+		for (var i = 0; i < listLayerID.length; i++) {
+		 if (this.checked) {
+		  map.setFilter(listLayerID[i][0], ["all",['==', 'type', listLayerID[i][1]],['<', 'startyear', 640],['>', 'endyear', 300]]);
+		 }
+		 else {
+		 map.setFilter(listLayerID[i][0], ['==', 'type', listLayerID[i][1]])
+		 }
+		 }
+		 };
+		//layername is the name of the place - ex places_major_settlement
+	   function onOffLayer(layername) {
+		if (document.getElementById(layername).checked) {
+		 map.setLayoutProperty(layername, 'visibility', 'visible');
+		 }
+		 else {
+		 map.setLayoutProperty(layername, 'visibility', 'none');
+		 
+		 }
+		};
+
   </script>
 </body>
 </html>
