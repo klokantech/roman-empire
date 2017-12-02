@@ -25,9 +25,9 @@
  #menu {
   position: absolute;
   right:10px;
-  top:120px;
+  top:110px;
   padding:2px;
-  border:2px solid lightgray;
+  border:0.5px solid dark grey;
   background:white;
   border-radius:6px;
  }
@@ -54,7 +54,7 @@ td.seperated, th.seperated {
 </head>
 <body>
   <div id="map"></div>
-  <button id="menu" title="Map settings"><img src="https://dare.ht.lu.se/vector/icons/symbolic.svg" style="width:20px;height:20px"></button>
+  <button id="menu" title="Map settings"><p><it>Double<br>Click</it></p><img src="https://dare.ht.lu.se/vector/icons/symbolic.svg" style="width:20px;height:20px"></button>
 <div id="ui-select">
   <!--div-->
 <table style="background-color: rgba(255,255,255,0.9);">
@@ -67,7 +67,7 @@ td.seperated, th.seperated {
 	<!--second row-->
 	<tr>
 		<td class="seperated">
-			<label><input id="archaic" type="checkbox">  Archaic (-750 – -550)</label>
+			<label><input id="archaic" type="radio" name="timePeriod">  Archaic (-750 – -550)</label>
 		</td>
 
 		<td>
@@ -103,7 +103,7 @@ td.seperated, th.seperated {
 	<!--third row-->
 	<tr>
 		<td class="seperated">
-			<label><input id="classical" type="checkbox">  Classical (-550 – -330)</label>
+			<label><input id="classical" type="radio" name="timePeriod">  Classical (-550 – -330)</label>
 		</td>
 		<td>
 			<label><input class="placeFilter" id= 'places_settlement' type="checkbox" onclick="onOffLayer('places_settlement')" checked>  Settlement</label>
@@ -138,7 +138,7 @@ td.seperated, th.seperated {
 	<!--fourth row-->
 	<tr>
 		<td class="seperated">
-			<label><input id="hellenistic" type="checkbox">  Hellenistic (-330 – -30)</label>
+			<label><input id="hellenistic" type="radio" name="timePeriod">  Hellenistic (-330 – -30)</label>
 		</td>
 		
 		<td>
@@ -174,7 +174,7 @@ td.seperated, th.seperated {
 	<!--fifth row-->
 	<tr>
 		<td class="seperated">
-			<label><input id="roman" type="checkbox">  Roman (-30 – 300)</label>
+			<label><input id="roman" type="radio" name="timePeriod">  Roman (-30 – 300)</label>
 		</td>
 
 		<td>
@@ -208,7 +208,7 @@ td.seperated, th.seperated {
 	<!--sixth row-->
 	<tr>
 		<td class="seperated">
-			<label><input id="lateAntique" type="checkbox">  Late Antique (300 – 640)</label>
+			<label><input id="lateAntique" type="radio" name="timePeriod">  Late Antique (300 – 640)</label>
 		</td>
 
 		<td>
@@ -235,7 +235,7 @@ td.seperated, th.seperated {
 			<img src="https://dare.ht.lu.se/vector/icons/tumulus.svg" height="16">
 		</td>
 		<td>
-			&nbsp; <!--label><input type="checkbox" class="languageSelect" id="latinModern" checked>  <b>Latin</b> (modern fallback)</label-->
+			<!--empty-->
 		</td>
 	</tr>
 	
@@ -272,7 +272,7 @@ td.seperated, th.seperated {
 	<!--eight row-->
 	<tr>
 		<td class="seperated">
-			<label><input id="showAll" type="checkbox" checked>  <b>Show all</b> (default)</label>
+			<label><input id="showAll" type="radio" checked name="timePeriod">  <b>Show all</b></label>
 		</td>
 		
 		<td>
@@ -368,9 +368,32 @@ td.seperated, th.seperated {
 				<option value="modern">Modern</option>
 			</select>
 		</td>
+			
 	</tr>
-	
-	
+	<tr>
+		<td class="seperated">
+			<!--empty-->
+		<td>
+			<label><input class="placeFilter" id= 'places_monument' type="checkbox" onclick="onOffLayer('places_monument')" checked>  Monument</label>
+		</td>
+		<td class="seperated" align="center">
+			<img src="https://dare.ht.lu.se/vector/icons/circle.svg" height="6">
+		</td>
+		<td>
+			<!--empty-->
+		</td>
+		<td class="seperated">
+			<!--empty-->
+		</td>
+		<td>
+			<!--empty-->
+		</td>
+		<td class="seperated">
+			<!--empty-->
+		</td>
+
+	</tr>
+		
 </table>
 
 </div>
@@ -384,7 +407,7 @@ td.seperated, th.seperated {
         container: 'map',
         attributionControl: true,
         hash: true,
-		center: [12, 44],
+		center: [17, 44],
 		zoom: 5,
 	
       });
@@ -423,104 +446,43 @@ td.seperated, th.seperated {
 		['places_church', "24"], ['places_monastery', "21"], ['places_cemetery', "63"], ['places_camp', "15"], 
 		['places_fortlet', "53"], ['places_bath', "66"], ['places_sancOrTemp', "61"], ['places_oasis', "19"], 
 		['places_lateRomanOppodium', "35"], ['places_ironAge', "31"], ['places_costalStation', "16"], ['places_fort', "18"],
-		['places_settlement', "12"],['places_civitasCapital', "13"], ['places_tumulus', "32"]]	
+		['places_settlement', "12"],['places_civitasCapital', "13"], ['places_tumulus', "32"], ['places_minor_settlement', "34"]]	
 	  	
 
 		document.getElementById('archaic').onclick = function() {
 		for (var i = 0; i < listLayerID.length; i++) {
-		 if (this.checked) {
 		  map.setFilter(listLayerID[i][0], ["all",['==', 'type', listLayerID[i][1]],['<', 'startyear', -550],['>', 'endyear', -750]]);
 		 }
-		 else {
-		 map.setFilter(listLayerID[i][0], ['==', 'type', listLayerID[i][1]])
-		 }
-		 }
-		 //uncheck all other... clumsy way
-		 document.getElementById("classical").checked = false
-		 document.getElementById("hellenistic").checked = false
-		 document.getElementById("roman").checked = false
-		 document.getElementById("lateAntique").checked = false
-		 document.getElementById("showAll").checked = false
 		 };
 		 
 		 document.getElementById('classical').onclick = function() {
 		for (var i = 0; i < listLayerID.length; i++) {
-		 if (this.checked) {
 		  map.setFilter(listLayerID[i][0], ["all",['==', 'type', listLayerID[i][1]],['<', 'startyear', -330],['>', 'endyear', -550]]);
 		 }
-		 else {
-		 map.setFilter(listLayerID[i][0], ['==', 'type', listLayerID[i][1]])
-		 }
-		 }
-		 document.getElementById("archaic").checked = false
-		 document.getElementById("hellenistic").checked = false
-		 document.getElementById("roman").checked = false
-		 document.getElementById("lateAntique").checked = false
-		 document.getElementById("showAll").checked = false
 		 };
 		 
 		document.getElementById('hellenistic').onclick = function() {
 		for (var i = 0; i < listLayerID.length; i++) {
-		 if (this.checked) {
 		  map.setFilter(listLayerID[i][0], ["all",['==', 'type', listLayerID[i][1]],['<', 'startyear', -30],['>', 'endyear', -330]]);
 		 }
-		 else {
-		 map.setFilter(listLayerID[i][0], ['==', 'type', listLayerID[i][1]])
-		 }
-		 }
-		 document.getElementById("classical").checked = false
-		 document.getElementById("archaic").checked = false
-		 document.getElementById("roman").checked = false
-		 document.getElementById("lateAntique").checked = false
-		 document.getElementById("showAll").checked = false
 		 };
 		 
 	    document.getElementById('roman').onclick = function() {
 		for (var i = 0; i < listLayerID.length; i++) {
-		 if (this.checked) {
 		  map.setFilter(listLayerID[i][0], ["all",['==', 'type', listLayerID[i][1]],['<', 'startyear', 300],['>', 'endyear', -30]]);
 		 }
-		 else {
-		 map.setFilter(listLayerID[i][0], ['==', 'type', listLayerID[i][1]])
-		 }
-		 }
-		 document.getElementById("classical").checked = false
-		 document.getElementById("hellenistic").checked = false
-		 document.getElementById("archaic").checked = false
-		 document.getElementById("lateAntique").checked = false
-		 document.getElementById("showAll").checked = false
 		 };
 		 
 	   document.getElementById('lateAntique').onclick = function() {
 		for (var i = 0; i < listLayerID.length; i++) {
-		 if (this.checked) {
 		  map.setFilter(listLayerID[i][0], ["all",['==', 'type', listLayerID[i][1]],['<', 'startyear', 640],['>', 'endyear', 300]]);
 		 }
-		 else {
-		 map.setFilter(listLayerID[i][0], ['==', 'type', listLayerID[i][1]])
-		 }
-		 }
-		 document.getElementById("classical").checked = false
-		 document.getElementById("hellenistic").checked = false
-		 document.getElementById("roman").checked = false
-		 document.getElementById("archaic").checked = false
-		 document.getElementById("showAll").checked = false
 		 };
 		 
 	   document.getElementById('showAll').onclick = function() {
 		for (var i = 0; i < listLayerID.length; i++) {
-		 if (this.checked) {
 		  map.setFilter(listLayerID[i][0], ['==', 'type', listLayerID[i][1]]);
 		 }
-		 else {
-		 map.setFilter(listLayerID[i][0], ['==', 'type', listLayerID[i][1]])
-		 }
-		 }
-		 document.getElementById("classical").checked = false
-		 document.getElementById("hellenistic").checked = false
-		 document.getElementById("roman").checked = false
-		 document.getElementById("archaic").checked = false
-		 document.getElementById("lateAntique").checked = false
 		 };
 		 
 		//turn on and off layers in legend
@@ -548,7 +510,6 @@ td.seperated, th.seperated {
 		
 		//choose language latin
 		document.getElementById('latin').onclick = function() {
-			// map.setLayoutProperty("label_leftOver_modern", "text-field", "{latin}")
 			map.setLayoutProperty("label_leftOver_latin", "text-field", "{latin}")
 			map.setLayoutProperty("label_mountain", "text-field", "{latin}")
 			map.setLayoutProperty("label_natural", "text-field", "{latin}")
@@ -557,19 +518,11 @@ td.seperated, th.seperated {
 			
 			//latin should be uppercase in a couple of categories
 			map.setLayoutProperty("label_major", "text-transform", "uppercase")
-			map.setLayoutProperty("label_civitas", "text-transform", "uppercase")
-			
-			//uncheck all other language boxes
-			// document.getElementById("modern").checked = false
-			// document.getElementById("greek").checked = false
-			// document.getElementById("latinModern").checked = false
-
-		
+			map.setLayoutProperty("label_civitas", "text-transform", "uppercase")	
 		};
 		
 		//all greek
 		document.getElementById('greek').onclick = function() {
-			// map.setLayoutProperty("label_leftOver_modern", "text-field", "{greek}")
 			map.setLayoutProperty("label_leftOver_latin", "text-field", "{greek}")
 			map.setLayoutProperty("label_mountain", "text-field", "{greek}")
 			map.setLayoutProperty("label_natural", "text-field", "{greek}")
@@ -579,18 +532,11 @@ td.seperated, th.seperated {
 			
 			//greek should not be uppercase
 			map.setLayoutProperty("label_major", "text-transform", "none")
-			map.setLayoutProperty("label_civitas", "text-transform", "none")
-			
-			//uncheck all other language boxes
-			// document.getElementById("modern").checked = false
-			// document.getElementById("latin").checked = false
-			// document.getElementById("latinModern").checked = false
-			
+			map.setLayoutProperty("label_civitas", "text-transform", "none")			
 		};
 		
 		
 		document.getElementById('modern').onclick = function() {
-			//map.setLayoutProperty("label_leftOver_modern", "text-field", "{modern}")
 			map.setLayoutProperty("label_leftOver_latin", "text-field", "{modern}")
 			map.setLayoutProperty("label_mountain", "text-field", "{modern}")
 			map.setLayoutProperty("label_natural", "text-field", "{modern}")
@@ -600,16 +546,10 @@ td.seperated, th.seperated {
 			
 			//modern should be uppercase in a couple of categories
 			map.setLayoutProperty("label_major", "text-transform", "uppercase")
-			map.setLayoutProperty("label_civitas", "text-transform", "uppercase")
-			
-			//uncheck all other language boxes
-			// document.getElementById("latin").checked = false
-			// document.getElementById("greek").checked = false
-			// document.getElementById("latinModern").checked = false	
+			map.setLayoutProperty("label_civitas", "text-transform", "uppercase")	
 		};
 		
 		document.getElementById('latinModern').onclick = function() {
-			// map.setLayoutProperty("label_leftOver_modern", "text-field", "{modern}")
 			map.setLayoutProperty("label_leftOver_latin", "text-field", "{latin}")
 			map.setLayoutProperty("label_mountain", "text-field", "{latin}")
 			map.setLayoutProperty("label_natural", "text-field", "{latin}")
@@ -620,12 +560,6 @@ td.seperated, th.seperated {
 			//modern should be uppercase in a couple of categories
 			map.setLayoutProperty("label_major", "text-transform", "uppercase")
 			map.setLayoutProperty("label_civitas", "text-transform", "uppercase")
-			
-			//uncheck all other language boxes
-			// document.getElementById("modern").checked = false
-			// document.getElementById("greek").checked = false
-			// document.getElementById("latin").checked = false
-			
 		};
 			
 			
