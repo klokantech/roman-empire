@@ -612,6 +612,31 @@
       "sprite": "icons"
     },
     {
+      "id": "places_minor_settlement",
+      "type": "symbol",
+      "source": "roman-empire",
+      "source-layer": "places",
+      "minzoom": 9,
+      "maxzoom": 24,
+      "filter": [
+        "all",
+        [
+          "==",
+          "type",
+          "34"
+        ]
+      ],
+      "layout": {
+        "icon-image": "settlement",
+        "icon-size": 0.5,
+        "icon-allow-overlap": true
+      },
+      "paint": {
+        "icon-opacity": 1
+      },
+      "sprite": "icons"
+    },
+    {
       "id": "places_bath",
       "type": "symbol",
       "source": "roman-empire",
