@@ -11,7 +11,7 @@
     #map { position:absolute; top:0; bottom:0; width:100%; }
     #lang {position:relative}
  
- .ui-select {
+ #ui-select {
   position:absolute;
   font-size:12px;
   top:10px;
@@ -20,8 +20,17 @@
   padding:1px;
   border:1px solid black;
   border-radius:1px;
+  display:none;
   }
-
+ #menu {
+  position: absolute;
+  right:10px;
+  top:120px;
+  padding:2px;
+  border:2px solid lightgray;
+  background:white;
+  border-radius:6px;
+ }
  .placeFilter {
    align: bottom;
    }
@@ -35,20 +44,19 @@ td, tg {
 }
 
 td.seperated, th.seperated {
- 
-    border-right: 1px solid #000;
+  border-right: 1px solid #000;
 	padding: 7px;
 }
 
 
 
-  </style>
+</style>
 </head>
 <body>
   <div id="map"></div>
-
-<div class="ui-select">
-  <div>
+  <button id="menu" title="Map settings"><img src="https://dare.ht.lu.se/vector/icons/symbolic.svg" style="width:20px;height:20px"></button>
+<div id="ui-select">
+  <!--div-->
 <table style="background-color: rgba(255,255,255,0.9);">
 
 	<!--firt row-->
@@ -59,7 +67,7 @@ td.seperated, th.seperated {
 	<!--second row-->
 	<tr>
 		<td class="seperated">
-			<label><input id="archaic" type="checkbox">  Archaic (-750 -- -550)</label>
+			<label><input id="archaic" type="checkbox">  Archaic (-750 – -550)</label>
 		</td>
 
 		<td>
@@ -86,7 +94,7 @@ td.seperated, th.seperated {
 			<img src="https://dare.ht.lu.se/vector/icons/settlement.svg" height="12">
 		</td>
 		<td>
-			<label><input type="checkbox" class="languageSelect" id="latin">  Latin</label>
+			<label><input name="language" type="radio" class="languageSelect" id="latin" checked>Latin</label>
 		</td>
 		
 		
@@ -95,7 +103,7 @@ td.seperated, th.seperated {
 	<!--third row-->
 	<tr>
 		<td class="seperated">
-			<label><input id="classical" type="checkbox">  Classical (-550 -- -330)</label>
+			<label><input id="classical" type="checkbox">  Classical (-550 – -330)</label>
 		</td>
 		<td>
 			<label><input class="placeFilter" id= 'places_settlement' type="checkbox" onclick="onOffLayer('places_settlement')" checked>  Settlement</label>
@@ -123,14 +131,14 @@ td.seperated, th.seperated {
 		</td>
 		
 		<td>
-			<label><input type="checkbox" class="languageSelect" id="greek">  Greek</label>
+			<label><input name="language" type="radio" class="languageSelect" id="greek">  Greek</label>
 		</td>
 	</tr>
 	
 	<!--fourth row-->
 	<tr>
 		<td class="seperated">
-			<label><input id="hellenistic" type="checkbox">  Hellenistic (-330 -- -30)</label>
+			<label><input id="hellenistic" type="checkbox">  Hellenistic (-330 – -30)</label>
 		</td>
 		
 		<td>
@@ -157,7 +165,7 @@ td.seperated, th.seperated {
 			<img src="https://dare.ht.lu.se/vector/icons/diamond_red.svg" height="14">
 		</td>
 		<td>
-			<label><input type="checkbox" class="languageSelect" id="modern">  Mordern</label>
+			<label><input name="language" type="radio" class="languageSelect" id="modern">Modern</label>
 		</td>
 	</tr>
 
@@ -166,7 +174,7 @@ td.seperated, th.seperated {
 	<!--fifth row-->
 	<tr>
 		<td class="seperated">
-			<label><input id="roman" type="checkbox">  Roman (-30 -- 300)</label>
+			<label><input id="roman" type="checkbox">  Roman (-30 – 300)</label>
 		</td>
 
 		<td>
@@ -227,7 +235,7 @@ td.seperated, th.seperated {
 			<img src="https://dare.ht.lu.se/vector/icons/tumulus.svg" height="16">
 		</td>
 		<td>
-			<label><input type="checkbox" class="languageSelect" id="latinModern" checked>  <b>Latin</b> (modern fallback)</label>
+			&nbsp; <!--label><input type="checkbox" class="languageSelect" id="latinModern" checked>  <b>Latin</b> (modern fallback)</label-->
 		</td>
 	</tr>
 	
@@ -401,7 +409,13 @@ td.seperated, th.seperated {
       oReq.open('get', STYLE_JSON_URL, true);
       oReq.send();
 	
-
+    document.getElementById('menu').onclick = function() {
+      var menutb=document.getElementById('ui-select');
+      if (menutb.style.display=="none")
+        menutb.style.display="block";
+      else
+        menutb.style.display="none";
+    }
 		var listLayerID = [['places_major_settlement', "11"],['places_major_fort', "17"], 
 		['places_villa', "14"], ['places_monument', "64"], ['places_aqueduct', "52"], 
 		['places_roadMilestone', "52"], ['places_lighthouse', "76"],['places_bridge', "51"], 
@@ -534,7 +548,7 @@ td.seperated, th.seperated {
 		
 		//choose language latin
 		document.getElementById('latin').onclick = function() {
-			map.setLayoutProperty("label_leftOver_modern", "text-field", "{latin}")
+			// map.setLayoutProperty("label_leftOver_modern", "text-field", "{latin}")
 			map.setLayoutProperty("label_leftOver_latin", "text-field", "{latin}")
 			map.setLayoutProperty("label_mountain", "text-field", "{latin}")
 			map.setLayoutProperty("label_natural", "text-field", "{latin}")
@@ -546,16 +560,16 @@ td.seperated, th.seperated {
 			map.setLayoutProperty("label_civitas", "text-transform", "uppercase")
 			
 			//uncheck all other language boxes
-			document.getElementById("modern").checked = false
-			document.getElementById("greek").checked = false
-			document.getElementById("latinModern").checked = false
+			// document.getElementById("modern").checked = false
+			// document.getElementById("greek").checked = false
+			// document.getElementById("latinModern").checked = false
 
 		
 		};
 		
 		//all greek
 		document.getElementById('greek').onclick = function() {
-			map.setLayoutProperty("label_leftOver_modern", "text-field", "{greek}")
+			// map.setLayoutProperty("label_leftOver_modern", "text-field", "{greek}")
 			map.setLayoutProperty("label_leftOver_latin", "text-field", "{greek}")
 			map.setLayoutProperty("label_mountain", "text-field", "{greek}")
 			map.setLayoutProperty("label_natural", "text-field", "{greek}")
@@ -568,15 +582,15 @@ td.seperated, th.seperated {
 			map.setLayoutProperty("label_civitas", "text-transform", "none")
 			
 			//uncheck all other language boxes
-			document.getElementById("modern").checked = false
-			document.getElementById("latin").checked = false
-			document.getElementById("latinModern").checked = false
+			// document.getElementById("modern").checked = false
+			// document.getElementById("latin").checked = false
+			// document.getElementById("latinModern").checked = false
 			
 		};
 		
 		
 		document.getElementById('modern').onclick = function() {
-			map.setLayoutProperty("label_leftOver_modern", "text-field", "{modern}")
+			//map.setLayoutProperty("label_leftOver_modern", "text-field", "{modern}")
 			map.setLayoutProperty("label_leftOver_latin", "text-field", "{modern}")
 			map.setLayoutProperty("label_mountain", "text-field", "{modern}")
 			map.setLayoutProperty("label_natural", "text-field", "{modern}")
@@ -589,14 +603,13 @@ td.seperated, th.seperated {
 			map.setLayoutProperty("label_civitas", "text-transform", "uppercase")
 			
 			//uncheck all other language boxes
-			document.getElementById("latin").checked = false
-			document.getElementById("greek").checked = false
-			document.getElementById("latinModern").checked = false
-			
+			// document.getElementById("latin").checked = false
+			// document.getElementById("greek").checked = false
+			// document.getElementById("latinModern").checked = false	
 		};
 		
 		document.getElementById('latinModern').onclick = function() {
-			map.setLayoutProperty("label_leftOver_modern", "text-field", "{modern}")
+			// map.setLayoutProperty("label_leftOver_modern", "text-field", "{modern}")
 			map.setLayoutProperty("label_leftOver_latin", "text-field", "{latin}")
 			map.setLayoutProperty("label_mountain", "text-field", "{latin}")
 			map.setLayoutProperty("label_natural", "text-field", "{latin}")
@@ -609,9 +622,9 @@ td.seperated, th.seperated {
 			map.setLayoutProperty("label_civitas", "text-transform", "uppercase")
 			
 			//uncheck all other language boxes
-			document.getElementById("modern").checked = false
-			document.getElementById("greek").checked = false
-			document.getElementById("latin").checked = false
+			// document.getElementById("modern").checked = false
+			// document.getElementById("greek").checked = false
+			// document.getElementById("latin").checked = false
 			
 		};
 			
