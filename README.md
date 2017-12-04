@@ -4,7 +4,7 @@
 
 Roman Empire Map made with vector tiles
 
-**[:globe_with_meridians: Browse the map](https://klokantech.github.io/roman-empire/#3.97/45.49/6.47)**
+**[:globe_with_meridians: Browse the map](https://klokantech.github.io/roman-empire/#4.01/41.957/19.646/0/8)**
 
 **[Edit online](https://editor.openmaptiles.org/?style=https://raw.githubusercontent.com/klokantech/roman-empire/master/style.json#4.6/42.943/8.771)**
 
