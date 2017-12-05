@@ -42,18 +42,6 @@
       "maxzoom": 24
     },
     {
-      "id": "hillshade",
-      "type": "raster",
-      "source": "hillshade",
-      "maxzoom": 22,
-      "layout": {
-        "visibility": "visible"
-      },
-      "paint": {
-        "raster-opacity": 0.3
-      }
-    },
-    {
       "id": "provinces",
       "type": "line",
       "source": "roman-empire",
