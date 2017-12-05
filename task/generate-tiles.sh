@@ -79,6 +79,7 @@ docker run -it --rm -v $(pwd)/data:/data -v $(pwd)/build:/build \
     klokantech/tippecanoe tile-join \
     -n "Roman Empire" \
     -f \
+    -A "<a href='https://www.klokantech.com/'>&copy; KlokanTech</a> <a href='https://dare.ht.lu.se/'>&copy; DARE</a>" \
     --no-tile-stats \
     -o /build/roman-empire.mbtiles \
     /build/roads_low.mbtiles \
