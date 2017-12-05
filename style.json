@@ -8,19 +8,18 @@
     "openmaptiles:version": "3.x"
   },
   "sources": {
-    "color-relief": {
-      "type": "raster",
-      "url": "https://klokantech.github.io/dare-raster-tiles/background.json",
-      "tileSize": 256
-    },
-    "hillshade": {
-      "type": "raster",
-      "url": "https://klokantech.github.io/dare-raster-tiles/hillshade.json",
-      "tileSize": 256
-    },
     "roman-empire": {
       "type": "vector",
       "url": "https://wmts.maptiler.com/aHR0cHM6Ly9rbG9rYW50ZWNoLmdpdGh1Yi5pby9yb21hbi1lbXBpcmUvcm9tYW4tZW1waXJlL21ldGFkYXRhLmpzb24/json"
+    },
+    "color-relief": {
+      "type": "raster",
+      "tileSize": 256,
+	    "attribution": "&copy; <a href='https://mapbox.com'>Mapbox</a> &copy; <a href='http://awmc.unc.edu/'>AWMC</a>",
+	    "tiles": [
+	      "http://a.tiles.mapbox.com/v3/isawnyu.map-knmctlkh/{z}/{x}/{y}.png",
+	      "http://b.tiles.mapbox.com/v3/isawnyu.map-knmctlkh/{z}/{x}/{y}.png"
+	     ]
     }
   },
   "sprite": "https://klokantech.github.io/roman-empire/icons/sprite",
@@ -59,16 +58,12 @@
       "type": "line",
       "source": "roman-empire",
       "source-layer": "provinces",
-      "minzoom": 3,
+      "minzoom": 0,
       "maxzoom": 6,
       "paint": {
         "line-color": "rgba(128, 0, 128, 1)",
         "line-width": {
           "stops": [
-            [
-              3,
-              1
-            ],
             [
               4,
               1
