@@ -20,7 +20,7 @@
     },
     "roman-empire": {
       "type": "vector",
-      "url": "https://gist.githubusercontent.com/klokan/1703cd90da5cfb0e74323f8f36b15b98/raw/tile.json"
+      "url": "https://wmts.maptiler.com/aHR0cHM6Ly9rbG9rYW50ZWNoLmdpdGh1Yi5pby9yb21hbi1lbXBpcmUvcm9tYW4tZW1waXJlL21ldGFkYXRhLmpzb24/json"
     }
   },
   "sprite": "https://klokantech.github.io/roman-empire/icons/sprite",
