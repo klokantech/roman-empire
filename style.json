@@ -15,7 +15,7 @@
     "color-relief": {
       "type": "raster",
       "tileSize": 256,
-	    "attribution": "&copy; <a href='https://mapbox.com'>Mapbox</a> &copy; <a href='http://awmc.unc.edu/'>AWMC</a>",
+	    "attribution": "&copy; <a href='http://awmc.unc.edu/'>AWMC</a>",
 	    "tiles": [
 	      "https://a.tiles.mapbox.com/v3/isawnyu.map-knmctlkh/{z}/{x}/{y}.png",
 	      "https://b.tiles.mapbox.com/v3/isawnyu.map-knmctlkh/{z}/{x}/{y}.png"
