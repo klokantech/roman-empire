@@ -1,0 +1,198 @@
+{
+  "bath": {
+    "height": 128,
+    "pixelRatio": 2,
+    "width": 128,
+    "x": 453,
+    "y": 0
+  },
+  "bridge": {
+    "height": 128,
+    "pixelRatio": 2,
+    "width": 128,
+    "x": 581,
+    "y": 0
+  },
+  "cemetery": {
+    "height": 128,
+    "pixelRatio": 2,
+    "width": 128,
+    "x": 709,
+    "y": 0
+  },
+  "church": {
+    "height": 128,
+    "pixelRatio": 2,
+    "width": 128,
+    "x": 0,
+    "y": 453
+  },
+  "circle": {
+    "height": 128,
+    "pixelRatio": 2,
+    "width": 128,
+    "x": 128,
+    "y": 453
+  },
+  "circle_11": {
+    "height": 34,
+    "pixelRatio": 2,
+    "width": 34,
+    "x": 1152,
+    "y": 453
+  },
+  "circle_brown": {
+    "height": 453,
+    "pixelRatio": 2,
+    "width": 453,
+    "x": 0,
+    "y": 0
+  },
+  "dam": {
+    "height": 128,
+    "pixelRatio": 2,
+    "width": 128,
+    "x": 256,
+    "y": 453
+  },
+  "diamond": {
+    "height": 128,
+    "pixelRatio": 2,
+    "width": 128,
+    "x": 384,
+    "y": 453
+  },
+  "diamond_red": {
+    "height": 128,
+    "pixelRatio": 2,
+    "width": 128,
+    "x": 512,
+    "y": 453
+  },
+  "lighthouse": {
+    "height": 128,
+    "pixelRatio": 2,
+    "width": 128,
+    "x": 640,
+    "y": 453
+  },
+  "mine": {
+    "height": 128,
+    "pixelRatio": 2,
+    "width": 128,
+    "x": 768,
+    "y": 453
+  },
+  "monastery": {
+    "height": 128,
+    "pixelRatio": 2,
+    "width": 128,
+    "x": 0,
+    "y": 581
+  },
+  "mount": {
+    "height": 128,
+    "pixelRatio": 2,
+    "width": 128,
+    "x": 128,
+    "y": 581
+  },
+  "oasis": {
+    "height": 128,
+    "pixelRatio": 2,
+    "width": 128,
+    "x": 256,
+    "y": 581
+  },
+  "pass": {
+    "height": 128,
+    "pixelRatio": 2,
+    "width": 128,
+    "x": 384,
+    "y": 581
+  },
+  "production": {
+    "height": 128,
+    "pixelRatio": 2,
+    "width": 128,
+    "x": 512,
+    "y": 581
+  },
+  "rapid": {
+    "height": 128,
+    "pixelRatio": 2,
+    "width": 128,
+    "x": 640,
+    "y": 581
+  },
+  "rectangle": {
+    "height": 128,
+    "pixelRatio": 2,
+    "width": 128,
+    "x": 768,
+    "y": 581
+  },
+  "settlement": {
+    "height": 128,
+    "pixelRatio": 2,
+    "width": 128,
+    "x": 0,
+    "y": 709
+  },
+  "shipwreck": {
+    "height": 128,
+    "pixelRatio": 2,
+    "width": 128,
+    "x": 128,
+    "y": 709
+  },
+  "spiral": {
+    "height": 128,
+    "pixelRatio": 2,
+    "width": 128,
+    "x": 256,
+    "y": 709
+  },
+  "square": {
+    "height": 128,
+    "pixelRatio": 2,
+    "width": 128,
+    "x": 384,
+    "y": 709
+  },
+  "star": {
+    "height": 128,
+    "pixelRatio": 2,
+    "width": 128,
+    "x": 512,
+    "y": 709
+  },
+  "tumulus": {
+    "height": 128,
+    "pixelRatio": 2,
+    "width": 128,
+    "x": 640,
+    "y": 709
+  },
+  "villa": {
+    "height": 128,
+    "pixelRatio": 2,
+    "width": 128,
+    "x": 768,
+    "y": 709
+  },
+  "waterwheel": {
+    "height": 128,
+    "pixelRatio": 2,
+    "width": 128,
+    "x": 896,
+    "y": 453
+  },
+  "windmill": {
+    "height": 128,
+    "pixelRatio": 2,
+    "width": 128,
+    "x": 1024,
+    "y": 453
+  }
+}

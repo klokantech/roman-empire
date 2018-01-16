@@ -1,0 +1,540 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Roman Empire Vector Map Preview</title>
+  <link rel="stylesheet" type="text/css" href="https://api.mapbox.com/mapbox-gl-js/v0.34.0/mapbox-gl.css">
+  <script src="https://api.mapbox.com/mapbox-gl-js/v0.34.0/mapbox-gl.js"></script>
+  <style>
+    body { margin:0; padding:0; }
+    #map { position:absolute; top:0; bottom:0; width:100%; }
+    #lang {position:relative}
+ 
+ #ui-select {
+  position:absolute;
+  font-size:12px;
+  top:10px;
+  right:50px;
+  z-index:100;
+  border:1px solid black;
+  border-radius:1px;
+  display:none;
+  }
+ 
+ #menu {
+  position: absolute;
+  right:10px;
+  top:110px;
+  padding:2px;
+  border:0.5px solid dark grey;
+  background:white;
+  border-radius:6px;
+ }
+ .placeFilter {
+   align: bottom;
+   }
+table {
+    border:none;
+    border-collapse: collapse;
+}
+
+td, tg {
+	padding: 5px;
+}
+
+td.seperated, th.seperated {
+  border-right: 1px solid #000;
+	padding: 7px;
+}
+  #language {
+        position: absolute;
+        padding: 10px;
+        font-family: 'Open Sans', sans-serif;
+  }
+  
+    #timeDrop {
+        position: absolute;
+		left:70px;
+        padding: 10px;
+        font-family: 'Open Sans', sans-serif;
+
+  }
+
+</style>
+</head>
+<body>
+  <div id="map" class="mapboxgl-map"><div class="mapboxgl-canvas-container mapboxgl-interactive"><canvas class="mapboxgl-canvas" style="position: absolute; width: 1600px; height: 538px;" tabindex="0" aria-label="Map" width="1600" height="538"></canvas></div><div class="mapboxgl-control-container"><div class="mapboxgl-ctrl-top-left"></div><div class="mapboxgl-ctrl-top-right"><div class="mapboxgl-ctrl mapboxgl-ctrl-group"><button class="mapboxgl-ctrl-icon mapboxgl-ctrl-zoom-in" type="button" aria-label="Zoom In"></button><button class="mapboxgl-ctrl-icon mapboxgl-ctrl-zoom-out" type="button" aria-label="Zoom Out"></button><button class="mapboxgl-ctrl-icon mapboxgl-ctrl-compass" type="button" aria-label="Reset North"><span class="mapboxgl-ctrl-compass-arrow" style="transform: rotate(0deg);"></span></button></div></div><div class="mapboxgl-ctrl-bottom-left"><div class="mapboxgl-ctrl"></div></div><div class="mapboxgl-ctrl-bottom-right"><div class="mapboxgl-ctrl mapboxgl-ctrl-attrib"></div></div></div></div>
+  <button id="menu" title="Map settings"><img src="https://dare.ht.lu.se/vector/icons/symbolic.svg" style="width:20px;height:20px"></button>
+<div id="ui-select">
+  <!--div-->
+<table style="background-color: rgba(255,255,255,0.9);">
+
+	<!--firt row-->
+    <tbody><tr align="left">
+       <th>&nbsp;Switch On/Off&nbsp;&nbsp;<button onclick="uncheckAll()">Uncheck All</button></th><th class="seperated">Legend</th><th>&nbsp;Switch On/Off</th><th class="seperated">Legend</th><th>&nbsp;Switch On/Off</th><th class="seperated">Legend</th>
+	</tr>
+	
+	<!--second row-->
+	<tr>
+		<td>
+			<label><input class="placeFilter" id="places_major_settlement" onclick="onOffLayer('places_major_settlement')" checked="" type="checkbox">  Major Settlement</label>
+		</td>
+		
+		<td class="seperated" align="center">
+			<img src="https://dare.ht.lu.se/vector/icons/settlement.svg" height="15">
+		</td>
+		
+		<td>
+			<label><input class="placeFilter" id="places_major_fort" onclick="onOffLayer('places_major_fort')" checked="" type="checkbox">  Major Fort</label>
+		</td>
+		
+		<td class="seperated" align="center">
+			<img src="https://dare.ht.lu.se/vector/icons/square.svg" height="15">
+		</td>
+		
+		<td>
+			<label><input class="placeFilter" id="places_civitasCapital" onclick="onOffLayer('places_civitasCapital')" checked="" type="checkbox">Civitas capital</label>
+		</td>
+		
+		<td class="seperated" align="center">
+			<img src="https://dare.ht.lu.se/vector/icons/settlement.svg" height="12">
+		</td>
+
+		
+		
+	</tr>
+	
+	<!--third row-->
+	<tr>
+		<td>
+			<label><input class="placeFilter" id="places_settlement" onclick="onOffLayer('places_settlement')" checked="" type="checkbox">  Settlement</label>
+		</td>
+		
+		<td class="seperated" align="center">
+			<img src="https://dare.ht.lu.se/vector/icons/settlement.svg" height="10">
+		</td>
+		
+		<!--minor settlement has to be added in the style sheet-->
+		<td>
+			<label><input class="placeFilter" id="places_minor_settlement" onclick="onOffLayer('places_minor_settlement')" checked="" type="checkbox">  Minor Settlement</label>
+		</td>
+		
+		<td class="seperated" align="center">
+			<img src="https://dare.ht.lu.se/vector/icons/settlement.svg" height="8">
+		</td>
+		
+		<td>
+			<label><input class="placeFilter" id="places_fort" onclick="onOffLayer('places_fort')" checked="" type="checkbox">  Fort</label>
+		</td>
+		
+		<td class="seperated" align="center">
+			<img src="https://dare.ht.lu.se/vector/icons/square.svg" height="12">
+		</td>
+		
+	</tr>
+	
+	<!--fourth row-->
+	<tr>
+		
+		<td>
+			<label><input class="placeFilter" id="places_fortlet" onclick="onOffLayer('places_fortlet')" checked="" type="checkbox">  Fortlet</label>
+		</td>
+		
+		<td class="seperated" align="center">
+			<img src="https://dare.ht.lu.se/vector/icons/square.svg" height="10">
+		</td>
+		
+		<td>
+			<label><input class="placeFilter" id="places_camp" onclick="onOffLayer('places_camp')" checked="" type="checkbox">  Camp</label>
+		</td>
+		
+		<td class="seperated" align="center">
+			<img src="https://dare.ht.lu.se/vector/icons/rectangle.svg" height="12">
+		</td>
+		
+		<td>
+			<label><input class="placeFilter" id="places_costalStation" onclick="onOffLayer('places_costalStation')" checked="" type="checkbox">  Road or Costal Station</label>
+		</td>
+		
+		<td class="seperated" align="center">
+			<img src="https://dare.ht.lu.se/vector/icons/diamond_red.svg" height="14">
+		</td>
+	</tr>
+
+
+	
+	<!--fifth row-->
+	<tr>
+		<td>
+			<label><input class="placeFilter" id="places_ironAge" onclick="onOffLayer('places_ironAge')" checked="" type="checkbox">  Iron Age (Celtic) Oppidum</label>
+		</td>
+		
+		<td class="seperated" align="center">
+			<img src="https://dare.ht.lu.se/vector/icons/circle_brown.svg" height="12">
+		</td>
+		
+		<td>
+			<label><input class="placeFilter" id="places_lateRomanOppodium" onclick="onOffLayer('places_lateRomanOppodium')" checked="" type="checkbox">  Late Roman Oppidum</label>
+		</td>
+		
+		<td class="seperated" align="center">
+			<img src="https://dare.ht.lu.se/vector/icons/circle.svg" height="12">
+		</td>
+		
+		<td>
+			<label><input class="placeFilter" id="places_oasis" onclick="onOffLayer('places_oasis')" checked="" type="checkbox">  Oasis</label>
+		</td>
+		
+		<td class="seperated" align="center">
+			<img src="https://dare.ht.lu.se/vector/icons/oasis.svg" height="16">
+		</td>
+
+	</tr>
+	
+	<!--sixth row-->
+	<tr>
+		<td>
+			<label><input class="placeFilter" id="places_sancOrTemp" onclick="onOffLayer('places_sancOrTemp')" checked="" type="checkbox">&nbsp;&nbsp;Sanctuary or temple
+		</label></td>
+		
+		<td class="seperated" align="center">
+			<img src="https://dare.ht.lu.se/vector/icons/star.svg" height="13">
+		</td>
+		
+		<td>
+			<label><input class="placeFilter" id="places_bath" onclick="onOffLayer('places_bath')" checked="" type="checkbox">  Bath</label>
+		</td>
+		
+		<td class="seperated" align="center">
+			<img src="https://dare.ht.lu.se/vector/icons/bath.svg" height="15">
+		</td>
+		
+		<td>
+			<label><input class="placeFilter" id="places_tumulus" onclick="onOffLayer('places_tumulus')" checked="" type="checkbox">  Tumulus</label>
+		</td>
+		
+		<td class="seperated" align="center">
+			<img src="https://dare.ht.lu.se/vector/icons/tumulus.svg" height="16">
+		</td>
+	</tr>
+	
+	<!--seventh row-->
+	<tr>
+		
+		<td>
+			<label><input class="placeFilter" id="places_cemetery" onclick="onOffLayer('places_cemetery')" checked="" type="checkbox">  Cemetery</label>
+		</td>
+		
+		<td class="seperated" align="center">
+			<img src="https://dare.ht.lu.se/vector/icons/cemetery.svg" height="13">
+		</td>
+		
+		<td>
+			<label><input class="placeFilter" id="places_monastery" onclick="onOffLayer('places_monastery')" checked="" type="checkbox">  Monastery</label>
+		</td>
+		
+		<td class="seperated" align="center">
+			<img src="https://dare.ht.lu.se/vector/icons/monastery.svg" height="15">
+		</td>
+		
+		<td>
+			<label><input class="placeFilter" id="places_church" onclick="onOffLayer('places_church')" checked="" type="checkbox">  Church</label>
+		</td>
+		
+		<td class="seperated" align="center">
+			<img src="https://dare.ht.lu.se/vector/icons/church.svg" height="15">
+		</td>
+		
+	<!--eight row-->
+	</tr><tr>
+		<td>
+			<label><input class="placeFilter" id="places_villa" onclick="onOffLayer('places_villa')" checked="" type="checkbox">  Villa</label>
+		</td>
+		
+		<td class="seperated" align="center">
+			<img src="https://dare.ht.lu.se/vector/icons/villa.svg" height="13">
+		</td>
+		
+		<td>
+			<label><input class="placeFilter" id="places_mine" onclick="onOffLayer('places_mine')" checked="" type="checkbox">  Mine, quarry</label>
+		</td>
+		
+		<td class="seperated" align="center">
+			<img src="https://dare.ht.lu.se/vector/icons/mine.svg" height="15">
+		</td>
+		
+		<td>
+			<label><input class="placeFilter" id="places_production" onclick="onOffLayer('places_production')" checked="" type="checkbox">  Production, kiln</label>
+		</td>
+		
+		<td class="seperated" align="center">
+			<img src="https://dare.ht.lu.se/vector/icons/mine.svg" height="15">
+		</td>
+	</tr>
+	
+	<!--ninth row-->
+	<tr>
+
+		
+		<td>
+			<label><input class="placeFilter" id="places_pass" onclick="onOffLayer('places_pass')" checked="" type="checkbox">  Pass</label>
+		</td>
+		
+		<td class="seperated" align="center">
+			<img src="https://dare.ht.lu.se/vector/icons/pass.svg" height="13">
+		</td>
+		
+		<td>
+			<label><input class="placeFilter" id="places_bridge" onclick="onOffLayer('places_bridge')" checked="" type="checkbox">  Bridge</label>
+		</td>
+		
+		<td class="seperated" align="center">
+			<img src="https://dare.ht.lu.se/vector/icons/bridge.svg" height="16">
+		</td>
+		
+		<td>
+			<label><input class="placeFilter" id="places_production" onclick="onOffLayer('places_production')" checked="" type="checkbox">  Road/milestone</label>
+		</td>
+		
+		<td class="seperated" align="center">
+			<img src="https://dare.ht.lu.se/vector/icons/circle.svg" height="6">
+		</td>
+	</tr>
+	
+	<!--tenth row-->
+	<tr>
+
+		
+		<td>
+			<label><input class="placeFilter" id="places_lighthouse" onclick="onOffLayer('places_lighthouse')" checked="" type="checkbox">  Lighthouse</label>
+		</td>
+		
+		<td class="seperated" align="center">
+			<img src="https://dare.ht.lu.se/vector/icons/lighthouse.svg" height="13">
+		</td>
+		
+		<td>
+			<label><input class="placeFilter" id="places_aqueduct" onclick="onOffLayer('places_aqueduct')" checked="" type="checkbox">  Aqueduct/dam/cistern/spring/well</label>
+		</td>
+		
+		<td class="seperated" align="center">
+			<img src="https://dare.ht.lu.se/vector/icons/circle.svg" height="6">
+		</td>
+		
+		<td>
+			<label><input class="placeFilter" id="places_rapid" onclick="onOffLayer('places_rapid')" checked="" type="checkbox">  Rapid</label>
+		</td>
+		
+		<td class="seperated" align="center">
+			<img src="https://dare.ht.lu.se/vector/icons/rapid.svg" height="12">
+		</td>
+		<td style="display:none;">
+			<!--not used: don't know how to take away-->
+			<select id="lang" onchange="updateStyle()">
+				<option value="latin">Latin</option>
+				<option value="greek">Greek</option>
+				<option value="modern">Modern</option>
+			</select>
+		</td>
+			
+	</tr>
+	<tr>
+		<td>
+			<label><input class="placeFilter" id="places_monument" onclick="onOffLayer('places_monument')" checked="" type="checkbox">  Monument</label>
+		</td>
+		<td class="seperated" align="center">
+			<img src="https://dare.ht.lu.se/vector/icons/circle.svg" height="6">
+		</td>
+		<td>
+			<!--empty-->
+		</td>
+		<td class="seperated">
+			<!--empty-->
+		</td>
+		<td>
+			<!--empty-->
+		</td>
+		<td class="seperated">
+			<!--empty-->
+		</td>
+
+	</tr>
+		
+</tbody></table>
+
+</div>
+
+<div id="language">
+	<select onChange="updateLang(this)">
+		<option value="latin">Latin</option>
+		<option value="greek">Greek</option>
+		<option value="modern">Modern</option>
+	</select>
+
+</div>
+
+<div id="timeDrop">
+		<select onChange="myFunction(this)">
+		<option value="allTimePeriods">All Time Periods</option>
+		<option value="archaic">Archaic (-750 – -550)</option>
+		<option value="classical">Classical (-550 – -330)</option>
+		<option value="hellenistic">Hellenistic (-330 – -30)</option>
+		<option value="roman">Roman (300 – -30)</option>
+		<option value="lateAntique">Late Antique (300 – 640)</option>
+	</select>
+</div>
+
+
+  <script>
+      var STYLE_JSON_URL = "style.json";
+      var STYLE_JSON;
+      mapboxgl.setRTLTextPlugin('https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-rtl-text/v0.1.0/mapbox-gl-rtl-text.js');
+      var map = new mapboxgl.Map({
+        container: 'map',
+        attributionControl: true,
+        hash: true,
+		center: [17, 44],
+		zoom: 5,
+	
+      });
+      map.addControl(new mapboxgl.NavigationControl());
+    
+      var langEl = document.getElementById('lang');
+      var updateStyle = function() {
+        if (!STYLE_JSON) return;
+        var language = langEl.value;
+        var style = JSON.stringify(STYLE_JSON);
+        style = style.replace(/\{(latin)\}/gi, '{' + language + '}');
+        if (language == 'greek') {
+          style = style.replace(/\"uppercase\"/gi, '"none"');
+        }
+        map.setStyle(JSON.parse(style));
+      };
+      var oReq = new XMLHttpRequest();
+      oReq.onload = function() {
+        STYLE_JSON = JSON.parse(this.responseText);
+        updateStyle();
+      };
+      oReq.open('get', STYLE_JSON_URL, true);
+      oReq.send();
+	
+    document.getElementById('menu').onclick = function() {
+      var menutb=document.getElementById('ui-select');
+      if (menutb.style.display=="none")
+        menutb.style.display="block";
+      else
+        menutb.style.display="none";
+    }
+		var listLayerID = [['places_major_settlement', "11"],['places_major_fort', "17"], 
+		['places_villa', "14"], ['places_monument', "64"], ['places_aqueduct', "52"], 
+		['places_roadMilestone', "52"], ['places_lighthouse', "76"],['places_bridge', "51"], 
+		['places_pass', "49"],['places_production', "58"], ['places_rapid', "43"], ['places_mine', "57"], 
+		['places_church', "24"], ['places_monastery', "21"], ['places_cemetery', "63"], ['places_camp', "15"], 
+		['places_fortlet', "53"], ['places_bath', "66"], ['places_sancOrTemp', "61"], ['places_oasis', "19"], 
+		['places_lateRomanOppodium', "35"], ['places_ironAge', "31"], ['places_costalStation', "16"], ['places_fort', "18"],
+		['places_settlement', "12"],['places_civitasCapital', "13"], ['places_tumulus', "32"], ['places_minor_settlement', "34"]]	
+
+	
+		 
+		 <!--UPDATED-->
+		 function myFunction(period) {
+		 if (period.value=="archaic"){
+			for (var i = 0; i < listLayerID.length; i++) {
+				map.setFilter(listLayerID[i][0], ["all",['==', 'type', listLayerID[i][1]],['<', 'startyear', -550],['>', 'endyear', -750]]);
+			}
+		 
+		 } else if (period.value=="classical"){
+		for (var i = 0; i < listLayerID.length; i++) {
+		  map.setFilter(listLayerID[i][0], ["all",['==', 'type', listLayerID[i][1]],['<', 'startyear', -330],['>', 'endyear', -550]]);
+		 }
+		 } else if (period.value=="roman"){
+		for (var i = 0; i < listLayerID.length; i++) {
+		  map.setFilter(listLayerID[i][0], ["all",['==', 'type', listLayerID[i][1]],['<', 'startyear', 300],['>', 'endyear', -30]]);
+		 }
+		 
+		 } else if (period.value=="hellenistic"){
+		for (var i = 0; i < listLayerID.length; i++) {
+		  map.setFilter(listLayerID[i][0], ["all",['==', 'type', listLayerID[i][1]],['<', 'startyear', -30],['>', 'endyear', -330]]);
+		 }
+		 
+		 } else if (period.value=="lateAntique"){
+		 
+		for (var i = 0; i < listLayerID.length; i++) {
+		  map.setFilter(listLayerID[i][0], ["all",['==', 'type', listLayerID[i][1]],['<', 'startyear', 640],['>', 'endyear', 300]]);
+		 }
+		 } else {	
+			for (var i = 0; i < listLayerID.length; i++){
+		  map.setFilter(listLayerID[i][0], ['==', 'type', listLayerID[i][1]]);
+		 }
+		 }
+		 };
+
+		 
+		//turn on and off layers in legend
+		//layername is the name of the place - ex places_major_settlement
+	   function onOffLayer(layername) {
+		if (document.getElementById(layername).checked) {
+		 map.setLayoutProperty(layername, 'visibility', 'visible');
+		 }
+		 else {
+		 map.setLayoutProperty(layername, 'visibility', 'none');
+		 
+		 }
+		};
+		
+		//option to turn off all place layers
+		function uncheckAll() {
+			var listWithPlaceTypes = document.getElementsByClassName("placeFilter");
+			for (var i = 0; i < listWithPlaceTypes.length; i++) {
+				listWithPlaceTypes[i].checked = false
+				onOffLayer(listWithPlaceTypes[i].id)
+				
+				}
+
+	 };
+		
+		//choose language latin
+		
+		function updateLang(langvalue) {
+		if (langvalue.value=="latin"){
+			map.setLayoutProperty("label_leftOver_latin", "text-field", "{latin}")
+			map.setLayoutProperty("label_mountain", "text-field", "{latin}")
+			map.setLayoutProperty("label_natural", "text-field", "{latin}")
+			map.setLayoutProperty("label_civitas", "text-field", "{latin}")
+			map.setLayoutProperty("label_major", "text-field", "{latin}")
+			
+			//latin should be uppercase in a couple of categories
+			map.setLayoutProperty("label_major", "text-transform", "uppercase")
+			map.setLayoutProperty("label_civitas", "text-transform", "uppercase")	
+		} else if (langvalue.value=="greek"){
+			map.setLayoutProperty("label_leftOver_latin", "text-field", "{greek}")
+			map.setLayoutProperty("label_mountain", "text-field", "{greek}")
+			map.setLayoutProperty("label_natural", "text-field", "{greek}")
+			map.setLayoutProperty("label_civitas", "text-field", "{greek}")
+			map.setLayoutProperty("label_major", "text-field", "{greek}")
+			map.setLayoutProperty("label_major", "text-field", "{greek}")
+			
+			//greek should not be uppercase
+			map.setLayoutProperty("label_major", "text-transform", "none")
+			map.setLayoutProperty("label_civitas", "text-transform", "none")			
+		} else {
+			map.setLayoutProperty("label_leftOver_latin", "text-field", "{modern}")
+			map.setLayoutProperty("label_mountain", "text-field", "{modern}")
+			map.setLayoutProperty("label_natural", "text-field", "{modern}")
+			map.setLayoutProperty("label_civitas", "text-field", "{modern}")
+			map.setLayoutProperty("label_major", "text-field", "{modern}")
+			map.setLayoutProperty("label_major", "text-field", "{modern}")
+			
+			//modern should be uppercase in a couple of categories
+			map.setLayoutProperty("label_major", "text-transform", "uppercase")
+			map.setLayoutProperty("label_civitas", "text-transform", "uppercase")	
+		}
+		};
+	
+			
+	 
+
+
+  </script>
+
+
+</body>

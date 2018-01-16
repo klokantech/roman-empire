@@ -1,0 +1,13 @@
+{
+    "attribution": "<a href='https://www.klokantech.com/'>&copy; KlokanTech</a> <a href='https://dare.ht.lu.se/'>&copy; DARE</a>", 
+    "name": "Roman Empire", 
+    "format": "pbf", 
+    "description": "/build/places_medium.mbtiles", 
+    "json": "{\"vector_layers\": [ { \"id\": \"fortifications\", \"description\": \"\", \"minzoom\": 6, \"maxzoom\": 11, \"fields\": {\"Name\": \"String\"} }, { \"id\": \"places\", \"description\": \"\", \"minzoom\": 0, \"maxzoom\": 11, \"fields\": {\"accuracy\": \"Number\", \"ancient\": \"Number\", \"building\": \"Number\", \"endyear\": \"Number\", \"greek\": \"String\", \"id\": \"String\", \"latin\": \"String\", \"major\": \"Number\", \"modern\": \"String\", \"startyear\": \"Number\", \"type\": \"String\"} }, { \"id\": \"provinces\", \"description\": \"\", \"minzoom\": 0, \"maxzoom\": 7, \"fields\": {\"name\": \"String\"} }, { \"id\": \"provinces_label\", \"description\": \"\", \"minzoom\": 0, \"maxzoom\": 7, \"fields\": {\"name\": \"String\"} }, { \"id\": \"roads\", \"description\": \"\", \"minzoom\": 0, \"maxzoom\": 11, \"fields\": {\"Known_or_a\": \"String\", \"Major_or_M\": \"String\", \"Name\": \"String\", \"descriptio\": \"String\"} } ]}", 
+    "bounds": "-9.843750,-7.885147,93.339844,68.269387", 
+    "minzoom": "0", 
+    "version": "2", 
+    "maxzoom": "11", 
+    "type": "overlay", 
+    "center": "23.818359,37.926835,11"
+}
